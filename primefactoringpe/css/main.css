@@ -1545,6 +1545,29 @@ input::-moz-focus-inner {
   left: 0;
 }
 
+/* ------------------------------------------------------------------- 
+ * ## cliente area toggle 
+ * ------------------------------------------------------------------- */
+ .header-client-toggle {
+   position: absolute;
+   top: 20%;
+   right: 5%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 230px;
+   font-size: 1.4rem;
+   font-family: "metropolis-regular", sans-serif;
+   text-transform: uppercase;
+   line-height: 45px;
+   color: #ffffff;
+   background-color: rgba(0,0,0,0.2);  
+  }
+  
+  .header-client-toggle:hover {
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.5);
+  }
 
 /* ------------------------------------------------------------------- 
  * ## mobile menu toggle 
