@@ -1549,22 +1549,27 @@ input::-moz-focus-inner {
  * ## cliente area toggle 
  * ------------------------------------------------------------------- */
  .header-client-toggle {
+   right: 180px;
    position: absolute;
    top: 20%;
-   right: 5%;
    display: flex;
    justify-content: center;
    align-items: center;
-   width: 230px;
+   padding-right: 20px;
+   padding-left: 20px;
    font-size: 1.4rem;
    font-family: "metropolis-regular", sans-serif;
    text-transform: uppercase;
    line-height: 45px;
    color: #ffffff;
    background-color: rgba(0,0,0,0.2);  
+   -webkit-transition: all 0.5s ease-in-out;
+   transition: all 0.5s ease-in-out;
   }
   
-  .header-client-toggle:hover {
+  .header-client-toggle:hover,
+  .header-client-toggle:focus,
+  .header-client-toggle:active {
     color: #ffffff;
     background-color: rgba(0,0,0,0.5);
   }
@@ -1651,6 +1656,10 @@ input::-moz-focus-inner {
   .header-menu-toggle {
     right: 60px;
   }
+
+  .header-client-toggle {
+    right: 130px;
+  }
 }
 @media only screen and (max-width: 800px) {
   .header-nav {
@@ -1663,6 +1672,10 @@ input::-moz-focus-inner {
 
   .header-menu-toggle {
     right: 40px;
+  }
+
+  .header-client-toggle {
+    right: 110px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -1682,6 +1695,10 @@ input::-moz-focus-inner {
   .header-menu-toggle {
     right: 25px;
     top: 30px;
+  }
+
+  .header-client-toggle {
+    right: 95px;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -1705,6 +1722,10 @@ input::-moz-focus-inner {
   .header-menu-toggle {
     top: 24px;
     right: 20px;
+  }
+
+  .header-client-toggle {
+    right: 90px;
   }
 }
 

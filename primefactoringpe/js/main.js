@@ -55,11 +55,11 @@
 
             if ($WIN.scrollTop() > 750) {
                 menuTrigger.addClass('opaque');
-                menuTrigger.removeClass('hide-all');
+                // menuTrigger.removeClass('hide-all');
             }
             else {
                 menuTrigger.removeClass('opaque');
-                menuTrigger.addClass('hide-all');
+                // menuTrigger.addClass('hide-all');
             }
 
         });
