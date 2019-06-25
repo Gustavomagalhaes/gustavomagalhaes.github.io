@@ -1374,7 +1374,7 @@ input::-moz-focus-inner {
   font-family: "metropolis-regular", sans-serif;
   font-size: 1.3rem;
   line-height: 1.846;
-  padding: 3.6rem 3rem 3.6rem 3.6rem;
+  padding: 3.6rem 3.6rem 3.6rem 3.6rem;
   height: 100%;
   /* width: 280px; */
   width: 380px;
@@ -1415,7 +1415,35 @@ input::-moz-focus-inner {
 }
 .header-nav p {
   margin-bottom: 2.7rem;
+  font-family: "metropolis-regular", sans-serif;
+  font-size: 1.4rem;
+  text-align: justify;
+  color: rgba(255,255,255,0.8);
 }
+
+.header-nav__button span {
+  margin-top: 2.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 1.2rem;
+  max-width: 320px;
+  font-family: "metropolis-regular", sans-serif;
+  text-transform: uppercase;
+  line-height: 45px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+ }
+ 
+ .header-nav__button:hover,
+ .header-nav__button:focus,
+ .header-nav__button:active {
+   color: #ffffff;
+ }
 
 .header-nav__content {
   background: #0c0c0c;
@@ -1475,7 +1503,7 @@ input::-moz-focus-inner {
   padding-left: 0;
 }
 .header-nav__social li a {
-  color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.55);
 }
 .header-nav__social li a:hover,
 .header-nav__social li a:focus {
@@ -1705,6 +1733,10 @@ input::-moz-focus-inner {
   .header-menu-toggle::before {
     display: none;
   }
+  
+  .header-client-toggle {
+    display: none;
+  }
 }
 @media only screen and (max-width: 400px) {
   .s-header {
@@ -1722,10 +1754,6 @@ input::-moz-focus-inner {
   .header-menu-toggle {
     top: 24px;
     right: 20px;
-  }
-
-  .header-client-toggle {
-    right: 90px;
   }
 }
 
