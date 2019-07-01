@@ -194,25 +194,26 @@ p img {
 }
 
 p.lead {
+  text-align: justify;
   font-family: "metropolis-regular", sans-serif;
-  font-size: 2.4rem;
+  font-size: 2.0rem;
   line-height: 1.75;
   margin-bottom: 3.6rem;
   color: rgba(85, 85, 85, 0.95);
 }
 @media only screen and (max-width: 1200px) {
   p.lead {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (max-width: 1000px) {
   p.lead {
-    font-size: 2.1rem;
+    font-size: 1.6rem;
   }
 }
 @media only screen and (max-width: 800px) {
   p.lead {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -343,6 +344,41 @@ hr {
   clear: both;
   margin: 2.4rem 0 1.5rem;
   height: 0;
+}
+
+.text-columns-2,
+.text-columns-3,
+.text-columns-4 {
+  column-width: 160px;
+  -webkit-column-gap: calc(24px + 4%);
+  column-gap: calc(24px + 4%);
+  -webkit-column-rule: 1px dotted rgba(0,0,0,.075);
+  column-rule: 1px solid rgba(0,0,0,.075);
+  margin-bottom: 36px;
+}
+
+.text-columns-2 {
+  -webkit-column-count: 2;
+	column-count: 2;
+}
+
+.text-columns-3 {
+  -webkit-column-count: 3;
+	column-count: 3;
+}
+
+.text-columns-4 {
+  -webkit-column-count: 4;
+	column-count: 4;
+}
+
+@media only screen and (max-width: 800px) {
+  .text-columns-2,
+  .text-columns-3,
+  .text-columns-4 {
+    -webkit-column-count: 1;
+	column-count: 1;
+  }
 }
 
 
@@ -1261,8 +1297,9 @@ input::-moz-focus-inner {
 
 .subtext {
   font-family: "metropolis-regular", sans-serif;
+  text-align: justify;
   padding: 0;
-  font-size: 2.2rem;
+  font-size: 1.9rem;
   line-height: 1.857;
   color: #ffffff;
   opacity: 0.4;
@@ -1779,7 +1816,7 @@ input::-moz-focus-inner {
   width: 100%;
   height: 100%;
   opacity: 0.4;
-  background: linear-gradient(to right, black 0%, black 20%, transparent 100%);
+  background: linear-gradient(to bottom, black 0%, black 20%, transparent 100%);
 }
 .s-home::before {
   display: block;
@@ -1959,9 +1996,9 @@ input::-moz-focus-inner {
  * ## home scroll
  * ------------------------------------------------------------------- */
 .home-social {
-  list-style: none;
-  font-size: 14px;
-  line-height: 4.8rem;
+  /* list-style: none; */
+  font-size: 18px;
+  line-height: 4rem;
   margin: 0;
   color: #ffffff;
   position: absolute;
@@ -1969,42 +2006,38 @@ input::-moz-focus-inner {
   left: 110px;
 }
 .home-social a {
+  opacity: 0.5;
+  margin: 0;
+  padding: 0;
   color: #ffffff;
-  border-bottom: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+
 .home-social a:hover {
-  border-bottom: 1px solid #ffffff;
+  opacity: 1;
+  border: 1px solid #ffffff;
 }
 .home-social i {
   /* display: none; */
 }
-.home-social .home-social-title {
-  font-family: "metropolis-semibold", sans-serif;
-  padding-right: 4rem;
-  margin-right: 0.8rem;
-  position: relative;
-}
-.home-social .home-social-title::after {
-  display: block;
-  content: "";
-  width: 2.4rem;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.1);
-  position: absolute;
-  right: 0;
-  top: 50%;
-}
-.home-social li {
-  display: inline-block;
-  position: relative;
+
+.home-social-button {
+  display: inline-flex;
+  text-align: center;
+  padding: 0;
   margin-right: 0.6rem;
+  width: 4rem;
+  /* border: 1px solid red; */
 }
-.home-social li a {
+.home-social-button a {
+  width: 4rem;
+  justify-content: center;
+  align-items: center; 
   display: block;
 }
-.home-social li:last-child {
+.home-social-button:last-child {
   margin-right: 0;
 }
 
@@ -2353,8 +2386,8 @@ html.no-csstransitions .home-content__main {
   position: relative;
   min-height: 24.6rem;
 }
-.process__col::before {
-  /* content: attr(data-item); */
+/* .process__col::before {
+  content: attr(data-item);
   display: block;
   font-family: "metropolis-semibold", sans-serif;
   font-size: 2.1rem;
@@ -2369,10 +2402,13 @@ html.no-csstransitions .home-content__main {
   position: absolute;
   left: 20px;
   top: 0;
-}
+} */
+
 .process__text {
-  margin-left: 7.5rem;
-  padding-right: 30px;
+  text-align: justify;
+  margin-left: 5.5rem;
+  margin-right: 5.5rem;
+  /* padding-right: 30px; */
 }
 
 
@@ -2489,6 +2525,7 @@ html.no-csstransitions .home-content__main {
 }
 .services-list .service-item {
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 .services-list .service-item h3 {
   margin-top: 0;
@@ -3096,20 +3133,20 @@ html.no-csstransitions .home-content__main {
 }
 
 .contact-main {
-  margin-top: 14.4rem;
+  margin-top: 4.4rem;
   margin-bottom: 4.8rem;
 }
 
 .contact-email {
   display: inline-block;
   font-family: "metropolis-light", sans-serif;
-  font-size: 5.4rem;
+  font-size: 3.4rem;
   line-height: 1.222;
   color: #ffffff;
   padding-top: 3.6rem;
   position: relative;
 }
-.contact-email::before {
+/* .contact-email::before {
   content: "";
   display: block;
   height: 1px;
@@ -3118,7 +3155,7 @@ html.no-csstransitions .home-content__main {
   position: absolute;
   top: 0;
   left: 0;
-}
+} */
 
 .contact-number {
   font-family: "metropolis-light", sans-serif;
@@ -3331,11 +3368,11 @@ html.no-csstransitions .home-content__main {
   }
 
   .contact-main {
-    margin-top: 13.2rem;
+    /* margin-top: 13.2rem; */
   }
 
   .contact-email {
-    font-size: 5rem;
+    font-size: 3rem;
   }
 
   .contact-number {
@@ -3356,7 +3393,7 @@ html.no-csstransitions .home-content__main {
 }
 @media only screen and (max-width: 1000px) {
   .contact-email {
-    font-size: 4.2rem;
+    font-size: 2.7rem;
   }
 
   .contact-number {
@@ -3387,7 +3424,7 @@ html.no-csstransitions .home-content__main {
   }
 
   .contact-email {
-    font-size: 3.6rem;
+    font-size: 2.3rem;
   }
 
   .contact-number {
@@ -3421,11 +3458,11 @@ html.no-csstransitions .home-content__main {
   }
 
   .contact-main {
-    margin-top: 12rem;
+    /* margin-top: 12rem; */
   }
 
   .contact-email {
-    font-size: 3rem;
+    font-size: 2.05rem;
   }
 
   .contact-number {
@@ -3474,7 +3511,7 @@ html.no-csstransitions .home-content__main {
   }
 
   .contact-main {
-    margin-top: 9.6rem;
+    /* margin-top: 9.6rem; */
   }
 
   .contact-secondary {
@@ -3482,7 +3519,7 @@ html.no-csstransitions .home-content__main {
   }
 
   .contact-email {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
 
   .contact-number {
