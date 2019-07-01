@@ -1616,7 +1616,7 @@ input::-moz-focus-inner {
  .header-client-toggle {
    right: 180px;
    position: absolute;
-   top: 17%;
+   top: 21%;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -1627,9 +1627,10 @@ input::-moz-focus-inner {
    font-family: "metropolis-light", sans-serif;
    font-size: 1.4rem;
    text-transform: uppercase;
-   line-height: 45px;
-   color: #ffffff;
-   background-color: rgba(0,0,0,0.1);  
+   line-height: 35px;
+   color: rgba(255,255,255,0.8);
+   /* background-color: rgba(0,0,0,0.1); */
+   border: 1px solid rgba(255, 255, 255, 0.15);
    -webkit-transition: all 0.5s ease-in-out;
    transition: all 0.5s ease-in-out;
   }
@@ -1638,7 +1639,8 @@ input::-moz-focus-inner {
   .header-client-toggle:focus,
   .header-client-toggle:active {
     color: #ffffff;
-    background-color: rgba(0,0,0,0.2);
+    border: 1px solid #ffffff;
+    /* background-color: rgba(0,0,0,0.2); */
   }
 
 /* ------------------------------------------------------------------- 
@@ -2006,7 +2008,7 @@ input::-moz-focus-inner {
   left: 110px;
 }
 .home-social a {
-  opacity: 0.5;
+  opacity: 0.8;
   margin: 0;
   padding: 0;
   color: #ffffff;
@@ -2029,6 +2031,7 @@ input::-moz-focus-inner {
   padding: 0;
   margin-right: 0.6rem;
   width: 4rem;
+  /* background-color: rgba(0,0,0,0.1); */
   /* border: 1px solid red; */
 }
 .home-social-button a {
@@ -3166,9 +3169,13 @@ html.no-csstransitions .home-content__main {
 
 .contact-address {
   font-family: "metropolis-regular", sans-serif;
-  font-size: 2.8rem;
+  font-size: 2.7rem;
   line-height: 1.607;
   margin-top: 2.4rem;
+}
+
+.contact-open {
+  max-width: 300px;
 }
 
 
@@ -3380,7 +3387,7 @@ html.no-csstransitions .home-content__main {
   }
 
   .contact-address {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   .contact-social {
@@ -3401,7 +3408,7 @@ html.no-csstransitions .home-content__main {
   }
 
   .contact-address {
-    font-size: 2.1rem;
+    font-size: 1.7rem;
   }
 
   .contact-social {
