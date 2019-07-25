@@ -1,3 +1,863 @@
-Hello,
-<br>
-I'm <b>Gustavo Magalhaes</b>, web and mobile developer
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Gustavo Magalhães</title>
+    <meta name="description" content="">
+    <meta name="author" content="Gustavo Magalhaes Pereira">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <!-- <img src="images/logo.svg" alt="Homepage"> -->
+                <img src="images/logo.png" alt="Homepage">
+            </a>
+        </div> <!-- end header-logo -->
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Fechar</span></a>
+
+            <div class="header-nav__content">
+                <h3>Gustavo</h3>
+                
+                <ul class="header-nav__list">
+                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Início</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="about">Sobre</a></li>
+                    <li><a class="smoothscroll"  href="#services" title="services">Serviços</a></li>
+                    <li><a class="smoothscroll"  href="#why" title="works">Por Que</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="contact">Contato</a></li>
+                </ul>
+    
+                <!-- <p class="header-nav__description">Somando mais de 30 anos de experiência no setor financeiro, os profissionais da Prime Factoring têm como objetivo oferecer serviços financeiros de Factoring para empresas que tenham necessidade de capital de giro para seu dia a dia. Siga-nos nas redes sociais.</p> -->
+    
+                <ul class="header-nav__social">
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/PrimeFactoring/"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/FactoringPrime"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/primefactoring/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/company/primefactoring/"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <!-- <li>
+                        <a target="_blank" href="https://www.linkedin.com/company/primefactoring/"><i class="fab fa-medium"></i></a>
+                    </li> -->
+                </ul>
+
+                <!-- <a class="header-nav__button" href="http://primefactoring.dyndns.org/FactaConsult/Account/Login.aspx" target="_blank">
+                    <span>Acessar Área do Cliente</span>
+                </a> -->
+            </div> <!-- end header-nav__content -->
+            
+        </nav> <!-- end header-nav -->
+        
+        <!-- <a class="header-client-toggle" href="http://primefactoring.dyndns.org/FactaConsult/Account/Login.aspx" target="_blank">
+            <span>Área do Cliente</span>
+        </a> -->
+
+        <a class="header-menu-toggle hide-all" href="#0">
+            <span class="header-menu-icon"></span>
+        </a>
+        
+    </header> <!-- end s-header -->
+    
+    
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=top>
+        
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+                <h1>
+                Gustavo.
+                </h1>
+
+                <p>
+                Front-End Developer for <br> Mobile and Web application.
+                </p>
+            </div> <!-- end home-content__main -->
+
+        </div> <!-- end home-content -->
+
+        <ul class="home-sidelinks hide-all">
+            <li><a class="smoothscroll" href="#about">Sobre</a></li>
+            <li><a class="smoothscroll" href="#services">Serviços</a></li>
+            <li><a class="smoothscroll" href="#why">Por Que</a></li>
+            <li><a  class="smoothscroll" href="#contact">Contato</a></li>
+            <!-- <li><a class="smoothscroll" href="#about">Sobre<span>Quem somos</span></a></li>
+            <li><a class="smoothscroll" href="#services">Serviços<span>O que fazemos</span></a></li>
+            <li><a class="smoothscroll" href="#why">Por Que<span>a Prime Factoring</span></a></li>
+            <li><a  class="smoothscroll" href="#contact">Contato<span>Vamos conversar?</span></a></li> -->
+        </ul> <!-- end home-sidelinks -->
+
+        <div class="home-social hide-all">
+            <!-- <li class="home-social-title">Follow Us</li> -->
+            <div class="home-social-button"><a target="_blank" href="https://www.facebook.com/PrimeFactoring/">
+                <i class="fab fa-facebook"></i>
+                <!-- <span class="home-social-text">&nbspFacebook</span> -->
+            </a></div>
+            <div class="home-social-button"><a target="_blank" href="https://twitter.com/FactoringPrime">
+                <i class="fab fa-twitter"></i>
+                <!-- <span class="home-social-text">&nbspTwitter</span> -->
+            </a></div>
+            <div class="home-social-button"><a target="_blank" href="https://www.instagram.com/primefactoring/">
+                <i class="fab fa-instagram"></i>
+                <!-- <span class="home-social-text">&nbspInstagram</span> -->
+            </a></div>
+            <div class="home-social-button"><a target="_blank" href="https://www.linkedin.com/company/primefactoring/">
+                <i class="fab fa-linkedin"></i>
+                <!-- <span class="home-social-text">&nbspLinkedIn</span> -->
+            </a></div>
+        </div> <!-- end home-social -->
+
+        <a href="#works" class="home-scroll smoothscroll">
+            <!-- <span class="home-scroll__text">Descer</span> -->
+            <span class="home-scroll__icon"></span>
+        </a> <!-- end home-scroll -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id='about' class="s-about hide-all">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Quem Somos</h3>
+                <h1 class="display-1">Somos um grupo de profissionais especializados no setor financeiro.</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row" data-aos="fade-up">
+            <div class="col-full">
+                <p class="lead text-columns-2">
+                        A Prime Factoring Fomento, iniciou suas atividades em 2013 e está localizada no Pontes Corporate Center em Boa Viagem, Recife – PE.
+                        Com profissionais especializados no setor financeiro e vindos de grandes instituições financeiras como Itaú, Citibank e Safra, temos o expertise para se diferenciar no segmento e oferecer soluções de fomento mercantil para pequenas, médias e grande empresas reforçarem o capital de giro e fluxo de caixa. <br>
+                        Com foco em tecnologia para redução de custos, aumento de produtividade e facilidade, conseguimos transformar esse investimento em taxas mais competitivas e em serviços simples e ágeis para nossos parceiros. <br>
+                        Quando falamos parceiros, somos parceiros mesmo! Apesar de estarmos sempre buscando estar na vanguarda do setor, não deixamos de lado o olho no olho e um aperto de mãos.
+                        Somos filiados à ANFAC – Associação Nacional de Factoring e seguimos todas as normas e procedimentos operacionais desta associação.                        
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row">
+                
+            <div class="about-process process block-1-2 block-tab-full">
+
+                <!-- <div class="process__vline-left"></div>
+                <div class="process__vline-right"></div> -->
+
+                <div class="col-block process__col" data-item="1" data-aos="fade-up">
+                    <div class="process__text">
+                        <h4>Missão</h4>
+
+                        <p>
+                            Atuar com excelência na concessão e gestão de Créditos aos diversos setores da economia, de forma ágil e eficiente, gerando valores para nossos clientes, investidores e acionistas, com transparência, credibilidade e confiabilidade do mercado.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block process__col" data-item="2" data-aos="fade-up">
+                    <div class="process__text">
+                        <h4>Visão</h4>
+
+                        <p>
+                            Ser um Fundo de Investimento respeitado e reconhecido no mercado por oferecer a seus clientes produtos e serviços de qualidade, e um relacionamento cordial e honesto com todos os entes envolvidos em suas operações.
+                        </p>
+                    </div>
+                </div>
+                <!-- <div class="col-block process__col" data-item="3" data-aos="fade-up">
+                    <div class="process__text">
+                        <h4>Build</h4>
+
+                        <p>
+                        Quos dolores saepe mollitia deserunt accusamus autem reprehenderit. Voluptas facere animi explicabo non quis magni recusandae. 
+                        Numquam debitis pariatur omnis facere unde. Laboriosam minus amet nesciunt est. Et saepe eos maxime tempore quasi deserunt ab.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block process__col" data-item="4" data-aos="fade-up">
+                    <div class="process__text">
+                        <h4>Launch</h4>
+
+                        <p>
+                        Quos dolores saepe mollitia deserunt accusamus autem reprehenderit. Voluptas facere animi explicabo non quis magni recusandae. 
+                        Numquam debitis pariatur omnis facere unde. Laboriosam minus amet nesciunt est. Et saepe eos maxime tempore quasi deserunt ab.
+                        </p>
+                    </div>
+                </div> -->
+
+            </div> <!-- end process -->
+
+        </div> <!-- end about-stats -->
+
+    </section> <!-- end s-about -->
+
+    <!-- services
+    ================================================== -->
+    <section id='services' class="s-services light-gray hide-all">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Nossos serviços</h3>
+                <h1 class="display-1">A Prime Factoring pode ajudar sua empresa através do fomento mercantil.</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row" data-aos="fade-up">
+            <!-- <div class="col-full">
+                <p class="lead">
+                        Saiba um pouco mais sobre como a Prime Factoring e o fomento mercantil podem ajudar sua empresa.
+                </p>
+            </div> -->
+        </div> <!-- end about-desc -->
+
+        <div class="row services-list block-1-1 block-m-1-1 block-tab-full">
+
+            <div class="col-block service-item " data-aos="fade-up">
+                <!-- <div class="service-icon service-icon--brand-identity">
+                    <i class="icon-tv"></i>
+                </div> -->
+                <div class="service-text">
+                    <h3 class="h4">Antecipação de Recebíveis</h3>
+                    <p>
+                        Antecipamos duplicatas ou cheques de vendas a prazo. Com taxas competitivas, suas vendas a prazo se tornam vendas a vista.
+                        Dessa maneira, você passa a ter a possibilidade de aumentar o capital de giro e reforçar o fluxo de caixa de sua empresa atendendo as necessidades do momento.
+                        Saiba um pouco mais sobre como a Prime Factoring e o fomento mercantil podem ajudar sua empresa.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <!-- <div class="service-icon  service-icon--illustration">
+                    <i class="icon-group"></i>
+                </div> -->
+                <div class="service-text">
+                    <h3 class="h4">Como o fomento mercantil pode auxiliar a sua empresa?</h3>
+                    <p>
+                        Seja para conseguir um desconto comprando à vista a seus fornecedores, necessidade com folha salarial, reforço de estoque, agilidade no crédito ou apenas deixar o caixa respirar um pouco, o fomento mercantil é uma solução ágil e competitiva praticada nas principais economias do mundo.
+                        Em alguns momentos, as factorings possuem a agilidade e flexibilidade que os grandes bancos não tem. Na Prime, conseguimos analisar e realizar o crédito no mesmo dia de envio da operação.
+                    </p>
+                </div>
+            </div>
+
+            <!-- <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon  service-icon--web-design">
+                    <i class="icon-earth"></i>
+                </div>  
+                <div class="service-text">
+                    <h3 class="h4">Web Design</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
+                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon service-icon--product-strategy">
+                    <i class="icon-cube"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h4">Product Strategy</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
+                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon  service-icon--ui-design">
+                    <i class="icon-window"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h4">UI/UX Design</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
+                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon service-icon--mobile-dev">
+                    <i class="icon-lego-block"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h4">Mobile Development</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
+                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div> -->
+
+        </div> <!-- end services-list -->
+
+    </section> <!-- end s-services -->
+
+    <!-- stats
+    ================================================== -->
+    <section id="stats" class="s-stats hide-all">
+
+        <div class="row stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+                
+            <div class="col-block stats__col ">
+                <div class="stats__count">130</div>
+                <h5>Empresas Atendidas</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">25</div>
+                <h5>Milhões Operados</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">200</div>
+                <h5>Projetos concluídos</h5>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">250</div>
+                <h5>Clientes Satisfeitos</h5> 
+            </div>
+
+        </div> <!-- end stats -->
+
+    </section> <!-- end s-stats -->
+
+    <!-- services
+    ================================================== -->
+    <section id='why' class="s-services light-gray hide-all">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Por que</h3>
+                <h1 class="display-1">Por que a Prime Factoring?</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row" data-aos="fade-up">
+            <div class="col-full">
+                <p class="lead">
+                    Somando mais de 30 anos de experiência no setor financeiro, os profissionais da Prime Factoring têm como objetivo oferecer serviços financeiros de Factoring para empresas que tenham necessidade de capital de giro para seu dia a dia.
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row services-list block-1-3 block-m-1-2 block-tab-full">
+
+            <div class="col-block service-item " data-aos="fade-up">
+                <div class="service-icon service-icon--brand-identity">
+                    <i class="icon-tv"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h4">Inovação Digital</h3>
+                    <p>
+                        A Prime Factoring possui uma plataforma digital, fazendo com que seja possível o envio de operações, acompanhamento de limite de crédito, emissão de boletos e, também, o acompanhamento de títulos vencidos, se tornando uma das pioneiras em inovação digital no estado, beneficiando os nossos clientes com a eficácia e eficiência na realização de operações. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon  service-icon--illustration">
+                    <i class="icon-group"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h4">Agilidade no Crédito</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
+                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon  service-icon--web-design">
+                    <i class="icon-earth"></i>
+                </div>  
+                <div class="service-text">
+                    <h3 class="h4">Parceiros</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
+                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon service-icon--product-strategy">
+                    <i class="icon-cube"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h4">Ética</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
+                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon  service-icon--ui-design">
+                    <i class="icon-window"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h4">Seriedade</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
+                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon service-icon--mobile-dev">
+                    <i class="icon-lego-block"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h4">Profissionalismo</h3>
+                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
+                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
+                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
+                    </p>
+                </div>
+            </div>
+
+        </div> <!-- end services-list -->
+
+    </section> <!-- end s-services -->
+
+    <!-- works
+    ================================================== -->
+    <section id='works' class="s-works">
+                
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Projects</h3>
+                <h1 class="display-1">These are some of my recent projects.</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row masonry-wrap">
+            <div class="masonry">
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-lamp.jpg" class="thumb-link" title="Lamp" data-size="1050x700">
+                                <img src="images/portfolio/lamp.jpg" 
+                                     srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Lamp
+                            </h3>
+                            <p class="item-folio__cat">
+                                Web Design
+                            </p>
+                        </div>
+
+                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                            Project Link
+                        </a>
+
+                        <div class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-salad.jpg" class="thumb-link" title="Salad" data-size="1050x700">
+                                <img src="images/portfolio/salad.jpg" 
+                                     srcset="images/portfolio/salad.jpg 1x, images/portfolio/salad@2x.jpg 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Salad
+                            </h3>
+                            <p class="item-folio__cat">
+                                Branding
+                            </p>
+                        </div>
+
+                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                            Project Link
+                        </a>
+
+                        <span class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
+                                <img src="images/portfolio/woodcraft.jpg"
+                                     srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Woodcraft
+                            </h3>
+                            <p class="item-folio__cat">
+                                Branding
+                            </p>
+                        </div>
+
+                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                            Project Link
+                        </a>
+
+                        <span class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-liberty.jpg" class="thumb-link" title="Liberty" data-size="1050x700">
+                                <img src="images/portfolio/liberty.jpg"
+                                     srcset="images/portfolio/liberty.jpg 1x, images/portfolio/liberty@2x.jpg 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Liberty
+                            </h3>
+                            <p class="item-folio__cat">
+                                Web Development
+                            </p>
+                        </div>
+
+                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                            Project Link
+                        </a>
+
+                        <span class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-fuji.jpg" class="thumb-link" title="Fuji" data-size="1050x700">
+                                <img src="images/portfolio/fuji.jpg"
+                                     srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Fuji
+                            </h3>
+                            <p class="item-folio__cat">
+                                Web Design
+                            </p>
+                        </div>
+
+                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                            Project Link
+                        </a>
+
+                        <span class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick" data-aos="fade-up">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-shutterbug.jpg" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                <img src="images/portfolio/shutterbug.jpg"
+                                     srcset="images/portfolio/shutterbug.jpg 1x, images/portfolio/shutterbug@2x.jpg 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Lady Shutterbug
+                            </h3>
+                            <p class="item-folio__cat">
+                                Branding
+                            </p>
+                        </div>
+
+                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
+                            Project Link
+                        </a>
+
+                        <span class="item-folio__caption">
+                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+            </div> <!-- end masonry -->
+        </div> <!-- end masonry-wrap -->
+
+        <div class="testimonials-wrap hide-all" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-full testimonials-header">
+                    <h2 class="h1">What Clients Are Saying.</h2>
+                </div>
+            </div>
+
+            <div class="row testimonials">
+
+                <div class="col-full testimonials__slider">
+
+                    <div class="testimonials__slide">
+                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
+                        <p>Qui ipsam temporibus quisquam velMaiores eos cumque distinctio nam accusantium ipsum. 
+                        Laudantium quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium quos qui praesentium corpori.</p>
+                        <div class="testimonials__author">
+                            Tim Cook
+                            <span>CEO, Apple</span>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+
+                    <div class="testimonials__slide">
+                        <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
+                        <p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
+                        Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam temporibus quisquam vel.</p>
+                        <div class="testimonials__author">
+                            Sundar Pichai
+                            <span>CEO, Google</span>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+
+                    <div class="testimonials__slide">
+                        <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
+                        <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
+                        Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.</p>
+                        <div class="testimonials__author">
+                            Satya Nadella
+                            <span>CEO, Microsoft</span>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+                    
+                </div> <!-- end testimonials__slider -->
+
+            </div> <!-- end testimonials -->
+
+        </div> <!-- end testimonials-wrap -->
+
+    </section> <!-- end s-works -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <!-- <h3 class="subhead subhead--light">Contate-nos</h3> -->
+                <h1 class="display-1 display-1--light">Get in touch!</h1>
+                <p class="subtext hide-all">
+                    I'm always looking to meet people and grow co and network, feel free to get in touch so we can start a nice .
+                </p>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row">
+
+            <div class="col-full contact-main" data-aos="fade-up">
+                    <h3 class="subhead subhead--light hide-all">Contate-nos</h3>
+                <p>
+                <a href="mailto:itsgustavopereira@gmail.com" class="contact-email">itsgustavopereira@gmail.com</a>
+                <!-- <a href="mailto:#0" class="contact-email">hello@transcend-studio.com</a> -->
+                <!-- <span class="contact-number">(81) 3040-5252  /  (81) 9 8918-8539
+                    <a target="_blank" href="https://wa.me/5581989188539"><i class="fab fa-whatsapp"></i></a>
+                </span> -->
+                </p>
+            </div> <!-- end contact-main -->
+
+        </div> <!-- end row -->
+
+        <div class="row">
+
+            <div class="col-five tab-full contact-secondary hide-all" data-aos="fade-up">
+                <h3 class="subhead subhead--light">Onde Nos Encontrar</h3>
+
+                <a target="_blank" href="https://www.google.com/maps/place/R.+Bar%C3%A3o+de+Souza+Le%C3%A3o,+426+-+Boa+Viagem,+Recife+-+PE,+51030-300/data=!4m2!3m1!1s0x7ab1fcba80aae1f:0xe1e73af2cde8d392?sa=X&ved=2ahUKEwjjsaTh0P7iAhXGJbkGHaFNDeMQ8gEwAHoECAgQAQ">
+                    <p class="contact-address">
+                        Rua Barão de Souza Leão, 426<br>
+                        51030-300, Sala 704<br>
+                        Boa Viagem, Recife - PE
+                    </p>
+                </a>
+                    <p class="contact-open">
+                        Funcionamos de segunda a sexta das 9h às 18h, exceto aos feriados.
+                    </p>
+            </div> <!-- end contact-secondary -->
+
+            <div class="col-five tab-full contact-secondary hide-all" data-aos="fade-up">
+                <h3 class="subhead subhead--light">Siga-nos</h3>
+
+                <ul class="contact-social">
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/PrimeFactoring/"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/FactoringPrime"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/primefactoring/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/company/primefactoring/"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                </ul> <!-- end contact-social -->
+
+                <div class="contact-subscribe">
+                    <!-- <form id="mc-form" class="group mc-form" novalidate="true">
+                        <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
+                        <input type="submit" name="subscribe" value="Subscribe">
+                        <label for="mc-email" class="subscribe-message"></label>
+                    </form> -->
+                </div> <!-- end contact-subscribe -->
+            </div> <!-- end contact-secondary -->
+
+        </div> <!-- end row -->
+
+        <div class="row">
+            <div class="col-full cl-copyright">
+                <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> <a href="index.html" target="_blank">Gustavo</a>. Todos os direitos reservados.
+<!-- <i class="hide-all fa fa-heart" aria-hidden="true"></i><a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span> 
+            </div>
+        </div>
+
+        <div class="cl-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+        </div>
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+        </div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
