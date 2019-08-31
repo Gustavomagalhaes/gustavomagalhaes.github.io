@@ -1289,10 +1289,10 @@ input::-moz-focus-inner {
   letter-spacing: 0.25rem;
   color: var(--primary-color-blue);
   margin-top: 0;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.0rem;
 }
 .subhead::before {
-  content: "/ ";
+  content: "> ";
 }
 
 .subtext {
@@ -3165,7 +3165,7 @@ html.no-csstransitions .home-content__main {
   font-size: 3.4rem;
   line-height: 1.222;
   color: #ffffff;
-  padding-top: 3.6rem;
+  /* padding-top: 0.6rem; */
   position: relative;
 }
 /* .contact-email::before {
@@ -3190,7 +3190,7 @@ html.no-csstransitions .home-content__main {
   font-family: "metropolis-regular", sans-serif;
   font-size: 2.7rem;
   line-height: 1.607;
-  margin-top: 2.4rem;
+  /* margin-top: 2.4rem; */
 }
 
 .contact-open {
