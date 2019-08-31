@@ -1289,7 +1289,7 @@ input::-moz-focus-inner {
   letter-spacing: 0.25rem;
   color: var(--primary-color-blue);
   margin-top: 0;
-  margin-bottom: 2.1rem;
+  margin-bottom: 1.8rem;
 }
 .subhead::before {
   content: "/ ";
@@ -1302,7 +1302,7 @@ input::-moz-focus-inner {
   font-size: 1.9rem;
   line-height: 1.857;
   color: #ffffff;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 /* ------------------------------------------------------------------- 
@@ -3036,7 +3036,7 @@ html.no-csstransitions .home-content__main {
   padding-top: 4.2rem;
   padding-bottom: 4.2rem;
   /* background-color: #050505; */
-  background-color: #111111;
+  /* background-color: #111111; */
   /* background-color: var(--primary-color-blue); */
   /* background-image: url(../images/stats-bg.jpg); */
   background-repeat: no-repeat;
@@ -3138,7 +3138,7 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-contact {
-  padding-top: 21rem;
+  padding-top: 15rem;
   padding-bottom: 10.2rem;
   background-color: #111111;
   color: rgba(255, 255, 255, 0.4);
@@ -3194,6 +3194,8 @@ html.no-csstransitions .home-content__main {
 }
 
 .contact-open {
+  color: #ffffff;
+  opacity: 0.6;
   max-width: 300px;
 }
 
@@ -3388,6 +3390,7 @@ html.no-csstransitions .home-content__main {
     right: 55px;
   }
 }
+
 @media only screen and (max-width: 1200px) {
   .s-contact {
     padding-top: 15rem;
@@ -3432,6 +3435,16 @@ html.no-csstransitions .home-content__main {
 
   .contact-social {
     font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .contact-email {
+    font-size: 2.5rem;
+  }
+
+  .contact-number {
+    font-size: 2.2rem;
   }
 }
 @media only screen and (max-width: 800px) {
