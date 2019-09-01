@@ -124,13 +124,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  margin-top: 6rem;
-  margin-bottom: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 @media only screen and (max-width:600px) {
   h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-    margin-top: 5.1rem;
+    margin-top: 1.5rem;
   }
 
 }
@@ -198,7 +198,7 @@ p.lead {
   font-family: "metropolis-regular", sans-serif;
   font-size: 2.0rem;
   line-height: 1.75;
-  margin-bottom: 3.6rem;
+  /* margin-bottom: 3.6rem; */
   color: rgba(85, 85, 85, 0.95);
 }
 @media only screen and (max-width: 1200px) {
@@ -352,9 +352,9 @@ hr {
   column-width: 160px;
   -webkit-column-gap: calc(24px + 4%);
   column-gap: calc(24px + 4%);
-  -webkit-column-rule: 1px dotted rgba(0,0,0,.075);
-  column-rule: 1px solid rgba(0,0,0,.075);
-  margin-bottom: 36px;
+  /* -webkit-column-rule: 1px dotted rgba(0,0,0,.075);
+  column-rule: 1px solid rgba(0,0,0,.075); */
+  /* margin-bottom: 36px; */
 }
 
 .text-columns-2 {
@@ -3069,18 +3069,18 @@ html.no-csstransitions .home-content__main {
   white-space: nowrap;
 }
 .stats__count {
-  font-family: "metropolis-light", sans-serif;
+  font-family: "metropolis-bold", sans-serif;
   font-size: 9.2rem;
   line-height: 1;
   color: #ffffff;
-  padding-bottom: 1.8rem;
+  /* padding-bottom: 1.8rem; */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   position: relative;
 }
 .stats__count::after {
-  display: block;
+  display: none;
   content: "";
   height: 1px;
   width: 100px;
@@ -3093,9 +3093,9 @@ html.no-csstransitions .home-content__main {
 .stats h5 {
   font-family: "metropolis-regular", sans-serif;
   font-size: 1.8rem;
-  line-height: 1.333;
+  line-height: 1;
   color: rgba(255, 255, 255, 0.5);
-  margin-top: 1.8rem;
+  margin-top: 0.5rem;
   position: relative;
 }
 
