@@ -1992,17 +1992,22 @@ input::-moz-focus-inner {
   display: block;
   height: 4.8rem;
   width: 4.8rem;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
   background-image: url(../images/icons/icon-arrow-down.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 10px 15px;
   border-radius: 50%;
+  border: 1px solid transparent;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   position: absolute;
   top: 0;
   right: 0;
+}
+.home-scroll:hover .home-scroll__icon {
+  background-color:transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .home-scroll:hover .home-scroll__text {
   border-bottom: 1px solid #ffffff;
