@@ -1624,13 +1624,12 @@ input::-moz-focus-inner {
    display: flex;
    justify-content: center;
    align-items: center;
-   padding-top: 3px;
-   padding-bottom: 3px;
    padding-right: 15px;
    padding-left: 15px;
    color: rgba(255,255,255,0.8);
    /* background-color: rgba(0,0,0,0.1); */
    border: 1px solid rgba(255, 255, 255, 0.15);
+   border-radius: 40px;
    -webkit-transition: all 0.5s ease-in-out;
    transition: all 0.5s ease-in-out;
   }
@@ -2017,6 +2016,70 @@ input::-moz-focus-inner {
   background-image: url(../images/icons/png/icon-arrow-down.png);
 }
 
+/* ------------------------------------------------------------------- 
+ * ## home scroll mouse edition
+ * ------------------------------------------------------------------- */
+ .mouse {
+  position: absolute;
+  right: calc(50% - 17px);
+  bottom: 4rem;
+  margin: auto;
+  width :34px;
+  height: 48px;
+}
+
+.mouse-body-light {
+  border: 1px solid #fff;
+  width: 32px;
+  height: 48px;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+}
+
+.mouse-scroll-light {
+  margin-top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+
+.mouse-body-dark {
+  border: 1px solid #000;
+  width: 32px;
+  height: 48px;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+}
+
+.mouse-scroll-dark {
+  margin-top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #000;
+  animation-name: scroll;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
 
 /* ------------------------------------------------------------------- 
  * ## home scroll
@@ -2028,22 +2091,16 @@ input::-moz-focus-inner {
   margin: 0;
   color: #ffffff;
   position: absolute;
-  bottom: 6.6rem;
+  bottom: 4.2rem;
   left: 110px;
 }
 .home-social a {
-  opacity: 0.8;
+  opacity: 0.7;
   margin: 0;
   padding: 0;
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.15);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-}
-
-.home-social a:hover {
-  opacity: 1;
-  border: 1px solid #ffffff;
 }
 .home-social i {
   /* display: none; */
@@ -2053,10 +2110,8 @@ input::-moz-focus-inner {
   display: inline-flex;
   text-align: center;
   padding: 0;
-  margin-right: 0.6rem;
-  width: 4rem;
-  /* background-color: rgba(0,0,0,0.1); */
-  /* border: 1px solid red; */
+  margin-right: 0;
+  width: 3rem;
 }
 .home-social-button a {
   width: 4rem;
@@ -2294,8 +2349,6 @@ html.no-csstransitions .home-content__main {
 
   .home-social {
     left: 30px;
-    bottom: 6rem;
-    bottom: 6rem;
   }
   .home-social i {
     display: inline;
@@ -2351,8 +2404,11 @@ html.no-csstransitions .home-content__main {
   }
 
   .home-social {
-    font-size: 13px;
+    font-size: 16px;
     left: 25px;
+  }
+  .home-social-button {
+    width: 2rem;
   }
   .home-social .home-social-title {
     padding-right: 0.6rem;
@@ -3040,10 +3096,6 @@ html.no-csstransitions .home-content__main {
 .s-stats {
   padding-top: 4.2rem;
   padding-bottom: 4.2rem;
-  /* background-color: #050505; */
-  /* background-color: #111111; */
-  /* background-color: var(--primary-color-blue); */
-  /* background-image: url(../images/stats-bg.jpg); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -3054,16 +3106,18 @@ html.no-csstransitions .home-content__main {
   display: block;
   content: "";
   /* background-color: #050505; */
-  background-color: #111111;
+  /* background-color: var(--primary-color-blue); */
+  background: linear-gradient(to top, black 0%, black 50%, transparent 100%);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .stats {
+  padding: 50px 0;
   text-align: center;
 }
 .stats__col {

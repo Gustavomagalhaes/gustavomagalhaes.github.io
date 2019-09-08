@@ -50,6 +50,8 @@ html {
 
 body {
     margin: 0;
+    --primary-color-blue: #0C629D;
+    --secondary-color-blue: #11364D;
 }
 
 article,
@@ -106,12 +108,13 @@ abbr[title] {
 b,
 strong {
     font-weight: inherit;
+    font-weight: bolder;
+    color: var(--primary-color-blue);
 }
 
-b,
-strong {
-    font-weight: bolder;
-}
+/* b:hover, strong:hover {
+    color: var(--primary-color-blue);
+} */
 
 code,
 kbd,
