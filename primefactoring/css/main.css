@@ -2608,6 +2608,20 @@ html.no-csstransitions .home-content__main {
   position: relative;
 }
 
+#doodle-goals {
+  /* display: flex;
+  object-fit: stretch;
+  flex: 1;
+  max-width: 100%;
+  border: 1px solid red; */
+  /* height: 200px; */
+  /* background-image: url(../images/doodle-goals.png) no-repeat center center fixed; */
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+}
+
 
 /* ------------------------------------------------------------------- 
  * ## services list
