@@ -203,17 +203,17 @@ p.lead {
 }
 @media only screen and (max-width: 1200px) {
   p.lead {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
 @media only screen and (max-width: 1000px) {
   p.lead {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (max-width: 800px) {
   p.lead {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 }
 

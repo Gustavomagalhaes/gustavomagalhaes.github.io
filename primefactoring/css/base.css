@@ -107,14 +107,20 @@ abbr[title] {
 
 b,
 strong {
+    letter-spacing: 0.15rem;
     font-weight: inherit;
     font-weight: bolder;
+    text-decoration: none;
+    padding: 2px 5px;
     color: var(--primary-color-blue);
 }
 
-/* b:hover, strong:hover {
-    color: var(--primary-color-blue);
-} */
+b:hover, strong:hover {
+    color: #fff;
+    text-decoration: none;
+    padding: 2px 5px;
+    background: var(--primary-color-blue);
+}
 
 code,
 kbd,
