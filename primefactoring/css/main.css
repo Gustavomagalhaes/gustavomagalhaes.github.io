@@ -1895,6 +1895,15 @@ input::-moz-focus-inner {
   top: 2.7rem;
 }
 
+.highlight {
+  color: #fff;
+  text-decoration: none;
+  padding: 2px 5px;
+  /* background: var(--primary-color-blue); */
+  /* background: rgba(0, 0, 0, 0.5); */
+  background: rgba(12,98,157, 0.4);
+}
+
 .home-content__main {
   padding-top: 15rem;
   padding-right: 20rem;
@@ -3094,8 +3103,8 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-stats {
-  padding-top: 4.2rem;
-  padding-bottom: 4.2rem;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -3117,7 +3126,6 @@ html.no-csstransitions .home-content__main {
 }
 
 .stats {
-  padding: 50px 0;
   text-align: center;
 }
 .stats__col {
@@ -3180,11 +3188,6 @@ html.no-csstransitions .home-content__main {
   }
 }
 @media only screen and (max-width: 400px) {
-  .s-stats {
-    padding-top: 4.5rem;
-    padding-bottom: 4.5rem;
-  }
-
   .stats__count {
     font-size: 8.2rem;
   }
