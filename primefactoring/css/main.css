@@ -1514,13 +1514,15 @@ input::-moz-focus-inner {
   display: block;
   color: #ffffff;
   position: relative;
-  padding-left: 1.5rem;
+  padding-left: 4.5rem;
 }
 .header-nav__list a::before {
   /* content: counter(ctr, decimal-leading-zero) "."; */
-  counter-increment: ctr;
-  font-family: "metropolis-regular", sans-serif;
-  font-size: 11px;
+  content: '>';
+  /* counter-increment: ctr; */
+  font-family: "metropolis-bold", sans-serif;
+  /* font-size: 11px; */
+  font-size: 60px;
   color: rgba(255, 255, 255, 0.25);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
