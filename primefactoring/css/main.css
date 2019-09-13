@@ -1775,8 +1775,8 @@ input::-moz-focus-inner {
   }
 
   .header-menu-toggle {
-    right: 25px;
     top: 30px;
+    right: 25px;
   }
 
   .header-client-toggle {
@@ -1786,6 +1786,10 @@ input::-moz-focus-inner {
 @media only screen and (max-width: 500px) {
   .header-menu-toggle::before {
     display: none;
+  }
+
+  .header-client-toggle {
+    right: 80px;
   }
 
   .header-client-toggle > i {
@@ -1812,7 +1816,11 @@ input::-moz-focus-inner {
 
   .header-menu-toggle {
     top: 24px;
-    right: 20px;
+    right: 10px;
+  }
+
+  .header-client-toggle {
+    right: 55px;
   }
 }
 
@@ -2028,19 +2036,80 @@ input::-moz-focus-inner {
 /* ------------------------------------------------------------------- 
  * ## home scroll mouse edition
  * ------------------------------------------------------------------- */
+
+ /*
+  new mouse
+ */
+
+ .cool-mouse-body {
+  position: absolute;
+  right: calc(50% - 17px);
+  bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 88px;
+  border-radius: 100px;
+ }
+
+ .cool-mouse {
+  background: #4e5559 linear-gradient (
+      transparent 0%,
+      transparent 50%,
+      #FFFFFF 50%,
+      #FFFFFF 100%
+    );
+  position: relative;
+  width: 40px;
+  height: 67px;
+  border-radius: 100px;
+  background-size: 100% 200%;
+  animation: 
+    colorSlide 7s linear infinite,
+    nudgeMouse 7s ease-out infinite;
+ }
+  .cool-mouse:before,
+  .cool-mouse:after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
+  }
+  .cool-mouse:before {
+    width: calc(40px - 4px);
+    height: calc(67px - 4px);
+    background-color: #222a30;
+    border-radius: 100px;
+  }
+  .cool-mouse:after {
+    background-color: #ffffff;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    animation: trackBallSlide 7s linear infinite;
+  }
+
+ /*
+  Simple mouse
+ */
+
  .mouse {
   position: absolute;
   right: calc(50% - 17px);
   bottom: 4rem;
   margin: auto;
   width :34px;
-  height: 48px;
+  height: 54px;
+  animation:
+    nudgeMouse 7s ease-out infinite;
 }
 
 .mouse-body-light {
   border: 1px solid #fff;
   width: 32px;
-  height: 48px;
+  height: 54px;
   border-radius: 25px;
   opacity: 0.75;
   box-sizing: content-box;
@@ -2049,21 +2118,20 @@ input::-moz-focus-inner {
 }
 
 .mouse-scroll-light {
-  margin-top: 8px;
+  margin-top: 15px;
+  align-self: center;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background-color: #fff;
-  animation-name: scroll;
-  animation-duration: 3s;
-  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
-  animation-iteration-count: infinite;
+  animation: trackBallSlide 7s linear infinite;
+  
 }
 
 .mouse-body-dark {
   border: 1px solid #000;
   width: 32px;
-  height: 48px;
+  height: 54px;
   border-radius: 25px;
   opacity: 0.75;
   box-sizing: content-box;
@@ -2072,21 +2140,119 @@ input::-moz-focus-inner {
 }
 
 .mouse-scroll-dark {
-  margin-top: 8px;
+  margin-top: 15px;
+  align-self: center;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background-color: #000;
-  animation-name: scroll;
-  animation-duration: 3s;
-  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
-  animation-iteration-count: infinite;
+  animation: trackBallSlide 7s linear infinite;
 }
 
 @keyframes scroll {
   0% { opacity: 0; }
   10% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(15px); opacity: 0;}
+}
+
+@keyframes colorSlide { 
+  0% { background-position: 0% 100%; }
+  20% { background-position: 0% 0%; }
+  21% { background-color: #4e5559; }
+  29.99% { 
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  30% { 
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  50% { background-position: 0% 0%; }
+  51% { background-color: #4e5559; }
+  59% { 
+    background-color: #ffffff;
+    background-position: 0% 0%;
+  }
+  60% { 
+    background-color: #4e5559;
+    background-position: 0% 100%;
+  }
+  80% { background-position: 0% 0%; }
+  81% { background-color: #4e5559; }
+  90%, 100% { background-color: #ffffff; }
+}
+
+@keyframes trackBallSlide {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  6% { 
+    opacity: 1;
+    transform: scale(0.9) translateY(20px/4);
+  }
+  14% {
+    opacity: 0;
+    transform: scale(0.4) translateY(20px*2);
+  }
+  15%, 19% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  28%, 29.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  36% { 
+    opacity: 1;
+    transform: scale(0.9) translateY(20px/4);
+  }
+  44% {
+    opacity: 0;
+    transform: scale(0.4) translateY(20px*2);
+  }
+  45%, 49% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  58%, 59.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+  66% { 
+    opacity: 1;
+    transform: scale(0.9) translateY(20px/4);
+  }
+  74% {
+    opacity: 0;
+    transform: scale(0.4) translateY(20px*2);
+  }
+  75%, 79% {
+    opacity: 0;
+    transform: scale(0.4) translateY(-20px);
+  }
+  88%, 100% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+  }
+}
+
+@keyframes nudgeMouse {
+  0% { transform: translateY(0); }
+  20% { transform: translateY(10px); }
+  30% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  60% { transform: translateY(0); }
+  80% { transform: translateY(10px); }
+  90% { transform: translateY(0); }
 }
 
 
