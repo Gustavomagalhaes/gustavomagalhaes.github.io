@@ -83,6 +83,7 @@ body {
   color: #555555;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   --primary-color-blue: #0C629D;
   --secondary-color-blue: #11364D;
   /* --highlight-color: #26bfb5; */
@@ -1262,7 +1263,6 @@ input::-moz-focus-inner {
   background-color: #f1f1f1;
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## display headings
  * ------------------------------------------------------------------- */
@@ -1522,7 +1522,7 @@ input::-moz-focus-inner {
   /* counter-increment: ctr; */
   font-family: "metropolis-bold", sans-serif;
   /* font-size: 11px; */
-  font-size: 60px;
+  font-size: 40px;
   color: rgba(255, 255, 255, 0.25);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -2776,12 +2776,66 @@ html.no-csstransitions .home-content__main {
   position: relative;
 }
 
-#doodle-goals {
-  /* border: 1px solid red; */
+.parallax {
+  height: 500px;
 }
 
-#doodle-deal {
-  /* border: 1px solid red; */
+.layer {
+  position: absolute;
+}
+
+.layer-1 {
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.layer-2 {
+  animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+}
+
+.layer-3 {
+  animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 
