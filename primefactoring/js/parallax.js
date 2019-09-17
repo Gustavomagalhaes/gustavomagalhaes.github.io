@@ -1,7 +1,11 @@
 setTimeout(function () {
 	const elems = document.querySelectorAll('.layer');
-	const layer1 = document.querySelector('.layer-1');
-	const layer2 = document.querySelector('.layer-2');
+	const goal_layer1 = document.querySelector('.goal-layer-1');
+	const goal_layer2 = document.querySelector('.goal-layer-2');
+
+	const deal_layer1 = document.querySelector('.deal-layer-1');
+	const deal_layer2 = document.querySelector('.deal-layer-2');
+
 	// const layer3 = document.querySelector('.layer-3');
 
 	elems.forEach(function (elem, index) {
@@ -29,9 +33,12 @@ setTimeout(function () {
 		let mouseY2 = ((height - e.clientY) / 60);
 		// let mouseY3 = ((height - e.clientY) / 90);
 
-		layer1.style.transform = "translate("+ -mouseX1 + "px," + -mouseY1 + "px)";
-		layer2.style.transform = "translate("+ mouseX2 + "px," + mouseY2 + "px)";
+		goal_layer1.style.transform = "translate("+ -mouseX1 + "px," + -mouseY1 + "px)";
+		goal_layer2.style.transform = "translate("+ mouseX2 + "px," + mouseY2 + "px)";
 		// layer3.style.transform = "translate("+ -mouseX3 + "px," + -mouseY3 + "px)";
+		
+		deal_layer1.style.transform = "translate("+ -mouseX1 + "px," + -mouseY1 + "px)";
+		deal_layer2.style.transform = "translate("+ mouseX2 + "px," + mouseY2 + "px)";
 	});
 	
 	document.body.addEventListener('mouseleave', function (e) {
