@@ -2570,6 +2570,10 @@ html.no-csstransitions .home-content__main {
   .home-content h1 + p {
     padding-top: 2.4rem;
   }
+
+  .home-social-button {
+    width: 2.3rem;
+  }
 }
 @media only screen and (max-width: 400px) {
   .s-home {
@@ -2607,7 +2611,15 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-
+@media only screen and (max-width: 350px) {
+  .home-social {
+    font-size: 14px;
+    left: 20px;
+  }
+  .home-social-button {
+    width: 1.8rem;
+  }
+}
 
 /* ===================================================================
  * # about
@@ -2827,7 +2839,7 @@ html.no-csstransitions .home-content__main {
   opacity: 0.5;
 }
 
-#articles {
+#my-articles {
   display: flex;
   justify-content: center;
   list-style: none;
@@ -2842,20 +2854,20 @@ html.no-csstransitions .home-content__main {
   transition: all 1s;
 }
 
-#articles h2 {
+#my-articles h2 {
   font-size: 1.25em;
   margin: 0;
   min-height: 100px;
 }
 
-#articles .date {
+#my-articles .date {
   color: rgba(0,0,0,0.5);
   font-size: 0.7em;
   margin-top: 0;
   text-transform: uppercase;
 }
 
-#articles li {
+#my-articles li {
   outline:0;
   background: #FFF;
   border-radius: 5px;
@@ -2879,19 +2891,19 @@ html.no-csstransitions .home-content__main {
   z-index: -2;
 }
 
-#articles li.go-away {
+#my-articles li.go-away {
   opacity: 0;
   top: 600px;
   transform:rotateX(10deg);
 }
 
-#articles li.error{
+#my-articles li.error{
   color:#fff;
   text-align:center;
   padding: 35px 10px;
 }
 
-#articles li .card-content {
+#my-articles li .card-content {
   background: white;
   opacity: 1;
   position: relative;
@@ -2900,34 +2912,34 @@ html.no-csstransitions .home-content__main {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-#articles li .card-content.open,
-#articles li:hover .card-content.open,
-#articles li:focus .card-content.open{
+#my-articles li .card-content.open,
+#my-articles li:hover .card-content.open,
+#my-articles li:focus .card-content.open{
   top: -200px;
 }
-#articles li:hover .card-content.open .description,
-#articles li:focus .card-content.open .description{
+#my-articles li:hover .card-content.open .description,
+#my-articles li:focus .card-content.open .description{
   opacity: 1;
 }
 
-#articles li:hover,#articles li:focus {
+#my-articles li:hover,#my-articles li:focus {
   cursor: pointer;
 }
 
-#articles li:hover .card-content,#articles li:focus .card-content{
+#my-articles li:hover .card-content,#my-articles li:focus .card-content{
   top: -80px;
 }
 
-#articles li:hover .description,#articles li:focus .description {
+#my-articles li:hover .description,#my-articles li:focus .description {
   opacity: 0.3;
 }
 
-#articles li .card-content {
+#my-articles li .card-content {
   width: 102%;
   margin-left: -4px;
 }
 
-#articles li .card-content:before {
+#my-articles li .card-content:before {
   display: none;
   content: "";
   height: 5px;
@@ -2938,42 +2950,42 @@ html.no-csstransitions .home-content__main {
   left: 0;
 }
 
-#articles li .card-content:before {
+#my-articles li .card-content:before {
   background-color: #0C629D;
 }
-#articles li.snapshot .card-content:before {
+#my-articles li.snapshot .card-content:before {
   background-color: #749d1c;
 }
-#articles li.soompi .card-content:before {
+#my-articles li.soompi .card-content:before {
   background-color: #7f4fca;
 }
-#articles li.music .card-content:before {
+#my-articles li.music .card-content:before {
   background-color: #4ecdc4;
 }
-#articles li.celeb .card-content:before {
+#my-articles li.celeb .card-content:before {
   background-color: #ff6b6b;
 }
-#articles li.features .card-content:before {
+#my-articles li.features .card-content:before {
   background-color: #f8ca00;
 }
 
-#articles li.music a {
+#my-articles li.music a {
   color: #4ecdc4;
 }
-#articles li.celeb a {
+#my-articles li.celeb a {
   color: #ff6b6b;
 }
-#articles li.features a {
+#my-articles li.features a {
   color: #f8ca00;
 }
-#articles li.snapshot a {
+#my-articles li.snapshot a {
   color: #749d1c;
 }
-#articles li.soompi a {
+#my-articles li.soompi a {
   color: #7f4fca;
 }
 
-#articles .card-image {
+#my-articles .card-image {
   background-color: #727991;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2983,21 +2995,21 @@ html.no-csstransitions .home-content__main {
   margin-left: -4px;
 }
 
-#articles .eyebrow-title {
+#my-articles .eyebrow-title {
   text-transform: uppercase;
   font-size: 0.8em;
   margin-top: 5px;
   margin-bottom: 0;
 }
 
-#articles .description {
+#my-articles .description {
   line-height: 1.5em;
   opacity: 0;
 
   transition: all 0.5s;
 }
 
-#articles .open .description {
+#my-articles .open .description {
   opacity: 1;
 }
 
@@ -3011,14 +3023,13 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width: 800px) {
-  #articles {
+  #my-articles {
     perspective-origin: 50% -30%;
     transition: all 1s;
   }
 }
 
 .read-more {
-  border: 1px solid red;
   margin:0 auto;
   margin-top: 5px;
 }

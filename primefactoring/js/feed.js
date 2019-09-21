@@ -32,8 +32,8 @@ function fetchFeed(url){
     type: 'GET',
     dataType: "xml",
     error:function(xhr, ajaxOptions, thrownError){
-      //$("#articles").append("<li class='error'><h2>Can't Fetch News :/</h2></li>");
-      //$("#articles").css("max-height","100px");
+      //$("#my-articles").append("<li class='error'><h2>Can't Fetch News :/</h2></li>");
+      //$("#my-articles").css("max-height","100px");
       // generateCards($("#backup").html(),false);
       // $(".limit-error").addClass("show");
     },
@@ -59,6 +59,7 @@ function generateCards(xml,isCDATA){
     
     var description = $(items[i]).find("content\\:encoded").text();
     description = description.split('<p>')[1].split('</p>')[0]
+    description = description.replace(/<[^>]*>/g, "");
     description = trimString(description,130);
 
     var pubDate = new Date($(items[i]).find('pubDate').text());
@@ -67,33 +68,33 @@ function generateCards(xml,isCDATA){
     var category = $(items[i]).find('category').last().text().toLowerCase();
     var html = generateHtml([category,title,pubDate,description,url,(i * -2)]);
 
-    $("#articles").append(html);
+    $("#my-articles").append(html);
     
     var image = $(items[i]).find("content\\:encoded").text();
     image = image.split('<img alt="" src="')[1].split('" />')[0]
-    $("#articles li").eq(i).find(".card-image").css("background-image","url("+image+")");
+    $("#my-articles li").eq(i).find(".card-image").css("background-image","url("+image+")");
     
   }
-  $("#articles").css("max-height","600px");
+  $("#my-articles").css("max-height","600px");
   arrangeCards();
 
-  $("#articles li").click(function(){
+  $("#my-articles li").click(function(){
     $(this).find(".card-content").toggleClass("open");
     if($(this).find(".card-content").hasClass("open")){
-      $("#articles li").eq(activeArticle).find("a").removeAttr("tabindex");
+      $("#my-articles li").eq(activeArticle).find("a").removeAttr("tabindex");
     }
   })
 
-  $('#articles li').keypress(function (e) {
+  $('#my-articles li').keypress(function (e) {
     var key = e.which;
     if(key == 13)  // the enter key code
     {
       $(this).find(".card-content").toggleClass("open");
       if($(this).find(".card-content").hasClass("open")){
-        $("#articles li").eq(activeArticle).find("a").removeAttr("tabindex");
+        $("#my-articles li").eq(activeArticle).find("a").removeAttr("tabindex");
       }
       else{
-        $("#articles li").eq(activeArticle).find("a").attr("tabindex",-1);
+        $("#my-articles li").eq(activeArticle).find("a").attr("tabindex",-1);
       }
       return false;  
     }
@@ -107,20 +108,20 @@ function generateCards(xml,isCDATA){
 function arrangeCards(){
   var order = 0;
   for (var i = activeArticle; i < totalArticle; i++){
-    $("#articles li").removeAttr("tabindex");
-    $("#articles li").eq(i).css("transform", "translate3d(0px, 0px, "+order*-50+"px) rotateX(0deg)");
+    $("#my-articles li").removeAttr("tabindex");
+    $("#my-articles li").eq(i).css("transform", "translate3d(0px, 0px, "+order*-50+"px) rotateX(0deg)");
     order++;
   }
-  $("#articles .card-content").removeClass("open");
-  $("#articles li").eq(activeArticle).attr("tabindex",0);
-  $("#articles li").eq(activeArticle).find("a").attr("tabindex",-1);
-  $("#articles li").eq(activeArticle).find(".open a").removeAttr("tabindex");
+  $("#my-articles .card-content").removeClass("open");
+  $("#my-articles li").eq(activeArticle).attr("tabindex",0);
+  $("#my-articles li").eq(activeArticle).find("a").attr("tabindex",-1);
+  $("#my-articles li").eq(activeArticle).find(".open a").removeAttr("tabindex");
 }
 
 function nextCard(){
   if(activeArticle < totalArticle - 1){
     $("nav button").removeAttr("disabled");
-    $("#articles li").eq(activeArticle).addClass("go-away");
+    $("#my-articles li").eq(activeArticle).addClass("go-away");
     activeArticle++;
     arrangeCards();
 
@@ -133,7 +134,7 @@ function prevCard(){
   if(activeArticle > 0){
     $("nav button").removeAttr("disabled");
     activeArticle--;
-    $("#articles li").eq(activeArticle).removeClass("go-away");
+    $("#my-articles li").eq(activeArticle).removeClass("go-away");
     arrangeCards();
 
     if(activeArticle == 0)
