@@ -1263,6 +1263,10 @@ input::-moz-focus-inner {
   background-color: #f1f1f1;
 }
 
+.gray {
+  background-color: #eee;
+}
+
 /* ------------------------------------------------------------------- 
  * ## display headings
  * ------------------------------------------------------------------- */
@@ -2767,7 +2771,257 @@ html.no-csstransitions .home-content__main {
   }
 }
 
+/* ===================================================================
+ * # Articles
+ *
+ * ------------------------------------------------------------------- */
 
+ .s-articles {
+  padding-top: 18rem;
+  padding-bottom: 18rem;
+  color: #555555;
+  line-height: 2em;
+  transition: height 5s;
+  position: relative;
+}
+
+#article-nav {
+  z-index: 100;
+  margin-top: -70px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#article-nav button {
+  background: white;
+  border: none;
+  border-radius: 100%;
+  box-sizing: border-box;
+  color: #0C629D;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 42px;
+  margin: 5px 10px;
+  padding: 0;
+  padding-left: 3px;
+  height: 40px;
+  width: 40px;
+  opacity: 0.8;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+#article-nav button:hover,
+#article-nav button:focus {
+  cursor: pointer;
+  opacity: 1;
+  outline:0;
+}
+
+#article-nav button[disabled],
+#article-nav button[disabled]:hover {
+  background: rgba(255,255,255,0.6);
+  color: rgba(0,0,0,0.3);
+  cursor: default;
+  opacity: 0.5;
+}
+
+#articles {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+
+  perspective: 1200px;
+  perspective-origin: 150% 50%;
+
+  height: 700px;
+  transition: all 1s;
+}
+
+#articles h2 {
+  font-size: 1.25em;
+  margin: 0;
+  min-height: 100px;
+}
+
+#articles .date {
+  color: rgba(0,0,0,0.5);
+  font-size: 0.7em;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+#articles li {
+  outline:0;
+  background: #FFF;
+  border-radius: 5px;
+  display: inline-block;
+  max-height: 390px;
+  max-width: 300px;
+  overflow: hidden;
+
+  box-shadow: 0 0 7px 0 rgba(0,0,0,0.2);
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+  transition: all 0.5s;
+  opacity: 1;
+
+  z-index: -2;
+}
+
+#articles li.go-away {
+  opacity: 0;
+  top: 600px;
+  transform:rotateX(10deg);
+}
+
+#articles li.error{
+  color:#fff;
+  text-align:center;
+  padding: 35px 10px;
+}
+
+#articles li .card-content {
+  background: white;
+  opacity: 1;
+  position: relative;
+  padding: 5px 15px;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#articles li .card-content.open,
+#articles li:hover .card-content.open,
+#articles li:focus .card-content.open{
+  top: -200px;
+}
+#articles li:hover .card-content.open .description,
+#articles li:focus .card-content.open .description{
+  opacity: 1;
+}
+
+#articles li:hover,#articles li:focus {
+  cursor: pointer;
+}
+
+#articles li:hover .card-content,#articles li:focus .card-content{
+  top: -80px;
+}
+
+#articles li:hover .description,#articles li:focus .description {
+  opacity: 0.3;
+}
+
+#articles li .card-content {
+  width: 102%;
+  margin-left: -4px;
+}
+
+#articles li .card-content:before {
+  display: none;
+  content: "";
+  height: 5px;
+  width: 300px;
+
+  position: absolute;
+  top: -2px;
+  left: 0;
+}
+
+#articles li .card-content:before {
+  background-color: #0C629D;
+}
+#articles li.snapshot .card-content:before {
+  background-color: #749d1c;
+}
+#articles li.soompi .card-content:before {
+  background-color: #7f4fca;
+}
+#articles li.music .card-content:before {
+  background-color: #4ecdc4;
+}
+#articles li.celeb .card-content:before {
+  background-color: #ff6b6b;
+}
+#articles li.features .card-content:before {
+  background-color: #f8ca00;
+}
+
+#articles li.music a {
+  color: #4ecdc4;
+}
+#articles li.celeb a {
+  color: #ff6b6b;
+}
+#articles li.features a {
+  color: #f8ca00;
+}
+#articles li.snapshot a {
+  color: #749d1c;
+}
+#articles li.soompi a {
+  color: #7f4fca;
+}
+
+#articles .card-image {
+  background-color: #727991;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center;
+  height: 200px;
+  width: 102%;
+  margin-left: -4px;
+}
+
+#articles .eyebrow-title {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+#articles .description {
+  line-height: 1.5em;
+  opacity: 0;
+
+  transition: all 0.5s;
+}
+
+#articles .open .description {
+  opacity: 1;
+}
+
+.description p:first-child {
+  overflow: hidden;
+  max-height: 145px;
+}
+
+.description p:nth-child(2) {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  #articles {
+    perspective-origin: 50% -30%;
+    transition: all 1s;
+  }
+}
+
+.read-more {
+  border: 1px solid red;
+  margin:0 auto;
+  margin-top: 5px;
+}
 
 /* ===================================================================
  * # services
@@ -2965,9 +3219,14 @@ html.no-csstransitions .home-content__main {
 
 /* ------------------------------------------------------------------- 
  * responsive:
- * services
+ * services, articles
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1200px) {
+  .s-articles {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+  }
+
   .s-services {
     padding-top: 15rem;
     padding-bottom: 15rem;
@@ -2981,6 +3240,11 @@ html.no-csstransitions .home-content__main {
   }
 }
 @media only screen and (max-width: 800px) {
+  .s-articles {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+
   .s-services {
     padding-top: 12rem;
     padding-bottom: 12rem;
@@ -3002,6 +3266,10 @@ html.no-csstransitions .home-content__main {
   }
 }
 @media only screen and (max-width: 400px) {
+  .s-articles {
+    padding-top: 9.6rem;
+  }
+
   .s-services {
     padding-top: 9.6rem;
   }
@@ -3536,7 +3804,7 @@ html.no-csstransitions .home-content__main {
 .s-contact {
   padding-top: 15rem;
   padding-bottom: 10.2rem;
-  background-color: #111111;
+  background-color: #111;
   color: rgba(255, 255, 255, 0.4);
   position: relative;
 }

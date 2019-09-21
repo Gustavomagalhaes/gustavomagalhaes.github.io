@@ -24,7 +24,26 @@
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
     <script src="js/typing.js"></script>
+    <script src="js/feed.js"></script>
     <script src="js/parallax.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/moment-pt-br.js"></script>
+
+    <script type="template" id="article-template">
+        <li class="{{category}}" style="z-index:{{z-index}};">
+            <div class="card-image">
+            </div>
+            <div class="card-content">
+            <p class="eyebrow-title">{{category}}</p>
+            <h2>{{title}}</h2>
+            <p class="date">{{pubDate}}</p>
+            <div class="description">
+                {{description}}
+            </div>
+            <p class="read-more"><a target="_blank" tabindex="-1" rel="noreferrer noopener" href="{{url}}">Ler Artigo</a></p>
+            </div>
+        </li>
+    </script>
 
     <!-- favicons
     ================================================== -->
@@ -76,6 +95,7 @@
                     <li><a class="smoothscroll"  href="#about" title="about">Sobre</a></li>
                     <li><a class="smoothscroll"  href="#stats" title="about">Estatísticas</a></li>
                     <li><a class="smoothscroll"  href="#objectives" title="works">Objetivos</a></li>
+                    <li><a class="smoothscroll"  href="#my-articles" title="works">Artigos</a></li>
                     <li><a class="smoothscroll"  href="#contact" title="contact">Contato</a></li>
                 </ul>
     
@@ -98,7 +118,6 @@
         </a>
         
     </header> <!-- end s-header -->
-    
     
     <!-- home
     ================================================== -->
@@ -170,7 +189,6 @@
         </a> <!-- end mouse--scroll -->
 
     </section> <!-- end s-home -->
-
 
     <!-- about
     ================================================== -->
@@ -465,7 +483,7 @@
 
         </div> <!-- end objectives-list -->
 
-        <a href="#contact" class="mouse smoothscroll">
+        <a href="#my-articles" class="mouse smoothscroll">
             <div class="mouse-body-dark">
                 <div class="mouse-scroll-dark"></div>
             </div>
@@ -822,6 +840,31 @@
         </div> <!-- end testimonials-wrap -->
 
     </section> <!-- end s-works -->
+
+    <!-- articles
+    ================================================== -->
+    <section id='my-articles' class="s-articles gray">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-1">Artigos</h1>
+            </div>
+        </div> <!-- end section-header -->
+        
+        <ul id="articles"></ul>
+        
+        <nav id='article-nav'>
+            <button class="prev-article" disabled><i class="fas fa-arrow-left"></i></button>
+            <button class="next-article"><i class="fas fa-arrow-right"></i></button>
+        </nav>
+        
+        <a href="#contact" class="mouse smoothscroll">
+            <div class="mouse-body-dark">
+                <div class="mouse-scroll-dark"></div>
+            </div>
+        </a> <!-- end mouse--scroll -->
+
+    </section> <!-- end s-articles -->
 
     <!-- contact
     ================================================== -->

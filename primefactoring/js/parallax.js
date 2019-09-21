@@ -23,14 +23,14 @@ setTimeout(function () {
 		}
 		e.currentTarget.dataset.triggered = true;
 		
-		let width = window.innerWidth / 2;
-		let height = window.innerHeight / 2;
+		let width = window.innerWidth / 3;
+		let height = window.innerHeight / 3;
 
-		let mouseX1 = ((width - e.clientX) / 30);
-		let mouseX2 = ((width - e.clientX) / 60);
+		let mouseX1 = ((width - e.clientX) / 60);
+		let mouseX2 = ((width - e.clientX) / 120);
 		// let mouseX3 = ((width - e.clientX) / 90);
-		let mouseY1 = ((height - e.clientY) / 30);
-		let mouseY2 = ((height - e.clientY) / 60);
+		let mouseY1 = ((height - e.clientY) / 60);
+		let mouseY2 = ((height - e.clientY) / 120);
 		// let mouseY3 = ((height - e.clientY) / 90);
 
 		goal_layer1.style.transform = "translate("+ -mouseX1 + "px," + -mouseY1 + "px)";
