@@ -2840,19 +2840,54 @@ html.no-csstransitions .home-content__main {
 }
 
 #my-articles {
-  display: flex;
-  justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0;
   overflow: hidden;
   position: relative;
-
-  perspective: 1200px;
-  perspective-origin: 150% 50%;
-
   height: 700px;
   transition: all 1s;
+  display: flex;
+  align-items: center;
+  
+  padding-left: 13%;
+  perspective: 1700px;
+  perspective-origin: 500% 50%;
+}
+
+@media only screen and (max-width: 1550px) {
+  #my-articles {
+    padding-left: 12%;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  #my-articles {
+    perspective: 2200px;
+    padding-left: 11%;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  #my-articles {
+    padding-left: 8%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #my-articles {
+    perspective: 2500px;
+    padding-left: 7%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #my-articles {
+    perspective-origin: 50% -30%;
+    transition: all 1s;
+    justify-content: center;
+    padding-left: 0;
+  }
 }
 
 #my-articles h2 {
@@ -2880,11 +2915,7 @@ html.no-csstransitions .home-content__main {
   box-shadow: 0 0 7px 0 rgba(0,0,0,0.2);
 
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+  top: 17.5%;
 
   transition: all 0.5s;
   opacity: 1;
@@ -3021,13 +3052,6 @@ html.no-csstransitions .home-content__main {
 
 .description p:nth-child(2) {
   display: none;
-}
-
-@media only screen and (max-width: 800px) {
-  #my-articles {
-    perspective-origin: 50% -30%;
-    transition: all 1s;
-  }
 }
 
 .read-more {
