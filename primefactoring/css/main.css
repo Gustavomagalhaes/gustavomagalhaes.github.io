@@ -195,7 +195,7 @@ p img {
 }
 
 p.lead {
-  text-align: justify;
+  /* text-align: justify; */
   font-family: "metropolis-regular", sans-serif;
   font-size: 2.4rem;
   line-height: 1.75;
@@ -1301,7 +1301,7 @@ input::-moz-focus-inner {
 
 .subtext {
   font-family: "metropolis-regular", sans-serif;
-  text-align: justify;
+  /* text-align: justify; */
   padding: 0;
   font-size: 2.1rem;
   line-height: 1.857;
@@ -1462,7 +1462,7 @@ input::-moz-focus-inner {
   margin-bottom: 2.7rem;
   font-family: "metropolis-regular", sans-serif;
   font-size: 1.4rem;
-  text-align: justify;
+  /* text-align: justify; */
   color: rgba(255,255,255,0.8);
 }
 
@@ -2685,7 +2685,7 @@ html.no-csstransitions .home-content__main {
 } */
 
 .process__text {
-  text-align: justify;
+  /* text-align: justify; */
   margin-left: 5.5rem;
   margin-right: 5.5rem;
   /* padding-right: 30px; */
@@ -3251,7 +3251,7 @@ html.no-csstransitions .home-content__main {
 }
 .services-list .service-item {
   margin-bottom: 1.5rem;
-  text-align: justify;
+  /* text-align: justify; */
 }
 .services-list .service-item h3 {
   margin-top: 0;
@@ -3856,12 +3856,13 @@ html.no-csstransitions .home-content__main {
 }
 .s-contact a {
   color: #ffffff;
-  border-bottom: 1px solid transparent;
+  /* border-bottom: 1px solid transparent; */
   display: inline-block;
 }
 .s-contact a:hover,
 .s-contact a:focus {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--primary-color-blue);
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .contact-main {
