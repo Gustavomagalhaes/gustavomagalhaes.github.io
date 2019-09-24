@@ -2898,6 +2898,7 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width: 800px) {
   .my-articles {
+    perspective: 1000px;
     perspective-origin: 50% -30%;
     transition: all 1s;
     justify-content: center;

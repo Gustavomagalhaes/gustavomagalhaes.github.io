@@ -64,27 +64,33 @@ function generateHtml(data){
 function generateCards(xml,isCDATA){
   var items = $(xml).find('item');
   for(var i = 0; i < totalArticle; i++){
-    var url = $(items[i]).find('guid').text();
-    
-    var title = $(items[i]).find('title').text();
-    title = trimString(title,65);
-    
-    var description = $(items[i]).find("content\\:encoded").text();
-    description = description.split('<p>')[1].split('</p>')[0]
-    description = description.replace(/<[^>]*>/g, "");
-    description = trimString(description,130);
-
-    var pubDate = new Date($(items[i]).find('pubDate').text());
-    pubDate = moment(pubDate).locale('pt-br').fromNow();
-
-    var category = $(items[i]).find('category').last().text().toLowerCase();
-    var html = generateHtml([category,title,pubDate,description,url,(i * -2)]);
-
-    $(".my-articles").append(html);
-    
-    var image = $(items[i]).find("content\\:encoded").text();
-    image = image.split('<img alt="" src="')[1].split('" />')[0]
-    $(".my-articles li").eq(i).find(".card-image").css("background-image","url("+image+")");
+    if (!!items[i]) {
+      var url = $(items[i]).find('guid').text();
+      
+      var title = $(items[i]).find('title').text();
+      title = trimString(title,65);
+      
+      var description = $(items[i]).find("content\\:encoded").text();
+      if (!!description) {
+        description = description.split('<p>')[1].split('</p>')[0]
+        description = description.replace(/<[^>]*>/g, "");
+        description = trimString(description,130);
+      }
+  
+      var pubDate = new Date($(items[i]).find('pubDate').text());
+      pubDate = moment(pubDate).locale('pt-br').fromNow();
+  
+      var category = $(items[i]).find('category').last().text().toLowerCase();
+      var html = generateHtml([category,title,pubDate,description,url,(i * -2)]);
+  
+      $(".my-articles").append(html);
+      
+      var image = $(items[i]).find("content\\:encoded").text();
+      if (!!image) {
+        image = image.split('<img alt="" src="')[1].split('" />')[0]
+      }
+      $(".my-articles li").eq(i).find(".card-image").css("background-image","url("+image+")");
+    }
     
   }
   $(".my-articles").css("max-height","600px");
@@ -183,8 +189,8 @@ function handleTouchMove(evt) {
 };
 
 window.onload = function() {
-  fetchFeed("https://medium.com/feed/concretebr");
-  // fetchFeed("https://medium.com/feed/@primefactoring");
+  // fetchFeed("https://medium.com/feed/concretebr");
+  fetchFeed("https://medium.com/feed/@primefactoring");
   // fetchFeed("https://medium.com/feed/@itsgustavopereira");
   
   $(".prev-article").click(function(){
