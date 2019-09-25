@@ -245,20 +245,25 @@
                 e.preventDefault();
                 e.stopPropagation();
 
+                closeMenu()
+
             $('html, body').stop().animate({
                 'scrollTop': $target.offset().top
-            }, cfg.scrollDuration, 'swing').promise().done(function () {
+            }, cfg.scrollDuration, 'swing').promise().then(function () {
 
-                // check if menu is open
-                if ($('body').hasClass('menu-is-open')) {
-                    $('.header-menu-toggle').trigger('click');
-                }
+                // closeMenu()
 
                 window.location.hash = target;
             });
         });
 
     };
+
+    var closeMenu = function() {
+        if ($('body').hasClass('menu-is-open')) {
+            $('.header-menu-toggle').trigger('click');
+        }
+    }
 
 
    /* Placeholder Plugin Settings
@@ -285,7 +290,7 @@
         
         AOS.init( {
             offset: 200,
-            duration: 600,
+            duration: 300,
             easing: 'ease-in-sine',
             delay: 300,
             once: true,

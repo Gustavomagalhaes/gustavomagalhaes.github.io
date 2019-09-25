@@ -3623,7 +3623,7 @@ html.no-csstransitions .home-content__main {
   display: block;
   content: "";
   /* background-color: var(--primary-color-blue); */
-  background-color: rgba(17, 54, 77, 0.8);
+  background-color: rgba(17, 54, 77, 0.5);
   /* background: linear-gradient(to top, black 0%, black 50%, transparent 100%); */
   /* background: linear-gradient(to top, black 50%, black 75%, black 100%); */
   position: absolute;
