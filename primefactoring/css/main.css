@@ -3086,9 +3086,12 @@ html.no-csstransitions .home-content__main {
 }
 
 .front-layer-1, 
-.front-layer-2,
 .middle-layer-1, 
-.middle-layer-2 {
+.front-layer-2,
+.middle-layer-2,
+.back-layer-2,
+.front-layer-3, 
+.middle-layer-3 {
   position: absolute;
 }
 

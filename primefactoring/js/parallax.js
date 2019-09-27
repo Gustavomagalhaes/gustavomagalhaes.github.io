@@ -5,6 +5,10 @@ setTimeout(function () {
 
 	const front_layer_2 = document.querySelector('.front-layer-2');
 	const middle_layer_2 = document.querySelector('.middle-layer-2');
+	const back_layer_2 = document.querySelector('.back-layer-2');
+
+	const front_layer_3 = document.querySelector('.front-layer-3');
+	const middle_layer_3 = document.querySelector('.middle-layer-3');
 
 	elems.forEach(function (elem, index) {
 		elem.style.animation = "none";
@@ -25,16 +29,22 @@ setTimeout(function () {
 		let height = window.innerHeight / 3;
 
 		let mouseX1 = ((width - e.clientX) / 60);
-		let mouseX2 = ((width - e.clientX) / 120);
+		let mouseX2 = ((width - e.clientX) / 90);
+		let mouseX3 = ((width - e.clientX) / 120);
 
 		let mouseY1 = ((height - e.clientY) / 60);
-		let mouseY2 = ((height - e.clientY) / 120);
+		let mouseY2 = ((height - e.clientY) / 90);
+		let mouseY3 = ((height - e.clientY) / 120);
 
 		front_layer_1.style.transform = "translate("+ -mouseX1 + "px," + -mouseY1 + "px)";
 		middle_layer_1.style.transform = "translate("+ mouseX2 + "px," + mouseY2 + "px)";
 		
-		front_layer_2.style.transform = "translate("+ -mouseX1 + "px," + -mouseY1 + "px)";
+		front_layer_2.style.transform = "translate("+ -mouseX3 + "px," + -mouseY3 + "px)";
 		middle_layer_2.style.transform = "translate("+ mouseX2 + "px," + mouseY2 + "px)";
+		back_layer_2.style.transform = "translate("+ -mouseX1 + "px," + -mouseY1 + "px)";
+
+		front_layer_3.style.transform = "translate("+ -mouseX3 + "px," + -mouseY3 + "px)";
+		middle_layer_3.style.transform = "translate("+ mouseX2 + "px," + mouseY2 + "px)";
 	});
 	
 	document.body.addEventListener('mouseleave', function (e) {
