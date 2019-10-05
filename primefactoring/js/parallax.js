@@ -1,14 +1,18 @@
 setTimeout(function () {
 	const elems = document.querySelectorAll('.layer');
+	// const front_layer_1 = document.querySelector('.front-layer-1');
+	// const middle_layer_1 = document.querySelector('.middle-layer-1');
+
 	const front_layer_1 = document.querySelector('.front-layer-1');
 	const middle_layer_1 = document.querySelector('.middle-layer-1');
+	const back_layer_1 = document.querySelector('.back-layer-1');
 
 	const front_layer_2 = document.querySelector('.front-layer-2');
 	const middle_layer_2 = document.querySelector('.middle-layer-2');
 	const back_layer_2 = document.querySelector('.back-layer-2');
 
-	const front_layer_3 = document.querySelector('.front-layer-3');
-	const middle_layer_3 = document.querySelector('.middle-layer-3');
+	// const front_layer_3 = document.querySelector('.front-layer-3');
+	// const middle_layer_3 = document.querySelector('.middle-layer-3');
 
 	elems.forEach(function (elem, index) {
 		elem.style.animation = "none";
@@ -36,15 +40,19 @@ setTimeout(function () {
 		let mouseY2 = ((height - e.clientY) / 90);
 		let mouseY3 = ((height - e.clientY) / 120);
 
-		front_layer_1.style.transform = "translate("+ -mouseX1 + "px," + -mouseY1 + "px)";
+		// front_layer_1.style.transform = "translate("+ -mouseX1 + "px," + -mouseY1 + "px)";
+		// middle_layer_1.style.transform = "translate("+ mouseX2 + "px," + mouseY2 + "px)";
+		
+		front_layer_1.style.transform = "translate("+ -mouseX3 + "px," + -mouseY3 + "px)";
 		middle_layer_1.style.transform = "translate("+ mouseX2 + "px," + mouseY2 + "px)";
+		back_layer_1.style.transform = "translate("+ -mouseX1 + "px," + -mouseY1 + "px)";
 		
 		front_layer_2.style.transform = "translate("+ -mouseX3 + "px," + -mouseY3 + "px)";
 		middle_layer_2.style.transform = "translate("+ mouseX2 + "px," + mouseY2 + "px)";
 		back_layer_2.style.transform = "translate("+ -mouseX1 + "px," + -mouseY1 + "px)";
 
-		front_layer_3.style.transform = "translate("+ -mouseX3 + "px," + -mouseY3 + "px)";
-		middle_layer_3.style.transform = "translate("+ mouseX2 + "px," + mouseY2 + "px)";
+		// front_layer_3.style.transform = "translate("+ -mouseX3 + "px," + -mouseY3 + "px)";
+		// middle_layer_3.style.transform = "translate("+ mouseX2 + "px," + mouseY2 + "px)";
 	});
 	
 	document.body.addEventListener('mouseleave', function (e) {
