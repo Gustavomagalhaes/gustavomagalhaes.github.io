@@ -1466,6 +1466,7 @@ input::-moz-focus-inner {
 .line > img {
   pointer-events: none;
   width: 100%;
+  border: 2px solid #111;
 }
 
  /* -------------------------------------------------------------------
