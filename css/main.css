@@ -1483,7 +1483,11 @@ input::-moz-focus-inner {
 .line > img {
   pointer-events: none;
   width: 100%;
-  border: 1px solid #111;
+  /* border: 1px solid red; */
+}
+
+.line > img::before {
+  border: 1px solid blue;
 }
 
  /* -------------------------------------------------------------------
