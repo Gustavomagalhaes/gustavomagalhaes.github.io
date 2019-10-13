@@ -1460,6 +1460,7 @@ input::-moz-focus-inner {
 }
 
 .line > img {
+  pointer-events: none;
   width: 100%;
 }
 
