@@ -1402,6 +1402,10 @@ input::-moz-focus-inner {
   position: absolute;
 }
 
+.logo-center > img {
+  pointer-events: none;
+}
+
 .logo-frame {
 	background: linear-gradient(-45deg, #23D5AB, #23A6D5, #6b00b6, #46049c);
 	background-size: 400% 400%;

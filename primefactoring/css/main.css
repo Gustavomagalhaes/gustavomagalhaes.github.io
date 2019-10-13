@@ -4165,6 +4165,10 @@ html.no-csstransitions .home-content__main {
   position: absolute;
 }
 
+.logo-center > img {
+  pointer-events: none;
+}
+
 @keyframes Gradient {
 	0% {
 		background-position: 0% 50%
