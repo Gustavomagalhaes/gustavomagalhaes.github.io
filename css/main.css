@@ -1494,7 +1494,7 @@ input::-moz-focus-inner {
  * ## LINES
  * ------------------------------------------------------------------- */
 
- .line {
+ .line2 {
   background: linear-gradient(-90deg, #23D5AB, #23A6D5, #6b00b6, #46049c);
   background-size: 300% 300%;
   animation: Gradient 7s ease infinite;
@@ -1504,6 +1504,9 @@ input::-moz-focus-inner {
 
 .line-background {
   pointer-events: none;
+  width: 100%;
+}
+.line {
   width: 100%;
 }
 
