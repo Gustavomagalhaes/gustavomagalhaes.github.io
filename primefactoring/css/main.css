@@ -589,7 +589,7 @@ form,
   left: 0;
   right: 0;
   bottom: 0;
-  background: #050505;
+  background: rgba(0, 0, 0, 0.7);
   z-index: 800;
   height: 100%;
   width: 100%;
@@ -3642,7 +3642,7 @@ html.no-csstransitions .home-content__main {
   text-align: center;
 }
 .stats__col {
-  margin: 5.4rem 0;
+  margin: 1rem 0;
   padding: 0 2rem;
   position: relative;
   overflow: hidden;
@@ -3688,9 +3688,9 @@ html.no-csstransitions .home-content__main {
   .stats {
     max-width: 900px;
   }
-  .stats__col {
-    margin: 3rem 0;
-  }
+  /* .stats__col {
+    margin: 2rem 0;
+  } */
   .stats__count {
     font-size: 9rem;
   }
@@ -3869,20 +3869,12 @@ html.no-csstransitions .home-content__main {
  * ## copyright
  * ------------------------------------------------------------------- */
 .cl-copyright {
-  margin-top: 2.1rem;
+  margin-top: 3rem;
 }
 
 .cl-copyright span {
   font-size: 15px;
-  display: flex;
-  justify-content: center;
 }
-/* .cl-copyright span::after {
-  content: "|";
-  display: inline-block;
-  padding: 0 1rem 0 1.2rem;
-  color: rgba(255, 255, 255, 0.1);
-} */
 
 .cl-copyright span:last-child::after {
   display: none;
@@ -3988,10 +3980,6 @@ html.no-csstransitions .home-content__main {
 
   .contact-social {
     font-size: 2.8rem;
-  }
-
-  .cl-copyright {
-    margin-top: 3rem;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -4150,11 +4138,11 @@ html.no-csstransitions .home-content__main {
 .logo-frame {
   position: relative;
   right: 0;
-  left: calc(50% - 25px);
+  left: calc(50% - 15px);
   bottom: 0;
-  margin-top: 25px;
-  width: 50px;
-  height: 50px;
+  margin-top: 15px;
+  width: 30px;
+  height: 30px;
   overflow: hidden;
   background: linear-gradient(-45deg, #23D5AB, #23A6D5, #6b00b6, #46049c);
 	background-size: 400% 400%;
