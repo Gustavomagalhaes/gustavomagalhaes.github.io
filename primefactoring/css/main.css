@@ -589,7 +589,7 @@ form,
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(2, 2, 2, 0.8);
   z-index: 800;
   height: 100%;
   width: 100%;
@@ -600,13 +600,21 @@ form,
   display: none;
 }
 
+#loaderLogo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 700px;
+  margin: -100px 0 0 -350px;
+}
+
 #loader {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 60px;
-  height: 60px;
-  margin: -30px 0 0 -30px;
+  width: 40px;
+  height: 40px;
+  margin: 20px 0 0 -20px;
   padding: 0;
 }
 
@@ -620,8 +628,8 @@ form,
   animation: load 1.1s infinite linear;
   display: block;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 }
 
 @-webkit-keyframes load {
@@ -642,6 +650,36 @@ form,
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #loaderLogo {
+    width: 500px;
+    margin: -80px 0 0 -250px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #loaderLogo {
+    width: 260px;
+    margin: -20px 0 0 -130px;
+  }
+
+  #loader {
+    width: 30px;
+    height: 30px;
+    margin: 40px 0 0 -15px;
+  }
+
+  #loader:before {
+    border-top: 3px solid rgba(255, 255, 255, 0.1);
+    border-right: 3px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+    border-left: 3px solid var(--primary-color-blue);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -1892,7 +1930,6 @@ input::-moz-focus-inner {
 }
 .home-content h1 {
   font-family: "metropolis-bold", sans-serif;
-  /* font-family: "domine-bold", sans-serif; */
   font-size: 9rem;
   line-height: 1.1;
   margin-top: 0;
@@ -1916,6 +1953,16 @@ input::-moz-focus-inner {
   position: absolute;
   left: 6px;
   top: 2.7rem;
+}
+
+#homeLogo {
+  transition: filter 0.5s ease-in;
+  filter: brightness(0) invert(1);
+  width: 800px;
+}
+
+#homeLogo:hover {
+  filter: none;
 }
 
 .highlight {
