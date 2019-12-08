@@ -3742,7 +3742,29 @@ html.no-csstransitions .home-content__main {
   }
 }
 
+/* ===================================================================
+ * # back to top section
+ *
+ * ------------------------------------------------------------------- */
 
+ .s-back {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.s-back a {
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.s-back a:hover,
+.s-back a:focus {
+  background-color: #ffffff;
+  color: #000000;
+}
 
 /* ===================================================================
  * # contact 
@@ -3750,7 +3772,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .s-contact {
   padding-top: 15rem;
-  padding-bottom: 10.2rem;
+  padding-bottom: 8rem;
   background-color: #111;
   color: rgba(255, 255, 255, 0.4);
   position: relative;
@@ -4048,7 +4070,7 @@ html.no-csstransitions .home-content__main {
 @media only screen and (max-width: 800px) {
   .s-contact {
     padding-top: 12rem;
-    padding-bottom: 9rem;
+    padding-bottom: 7rem;
   }
   
   .contact-secondary {
@@ -4144,7 +4166,7 @@ html.no-csstransitions .home-content__main {
 @media only screen and (max-width: 400px) {
   .s-contact {
     padding-top: 9.6rem;
-    padding-bottom: 7rem;
+    padding-bottom: 5rem;
   }
 
   .contact-secondary {
