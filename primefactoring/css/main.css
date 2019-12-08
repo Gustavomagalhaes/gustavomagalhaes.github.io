@@ -3938,86 +3938,10 @@ html.no-csstransitions .home-content__main {
   display: none;
 }
 
-
-/* ------------------------------------------------------------------- 
- * ## go to top
- * ------------------------------------------------------------------- */
-.cl-go-top {
-  z-index: 600;
-  position: absolute;
-  bottom: 10.8rem;
-  right: 105px;
-}
-.cl-go-top a {
-  text-decoration: none;
-  border: 0 none;
-  display: block;
-  height: 60px;
-  width: 60px;
-  line-height: 60px;
-  text-align: center;
-  /* background: black; */
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  border-radius: 50%;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.cl-go-top a i {
-  font-size: 21px;
-  line-height: inherit;
-}
-.cl-go-top a:hover,
-.cl-go-top a:focus {
-  background-color: #ffffff;
-  color: #000000;
-}
-/* .cl-go-top::before {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.1);
-  position: absolute;
-  top: -115px;
-  left: 50%;
-} */
-.cl-go-top::after {
-  /* content: "Início"; */
-  display: inline-block;
-  width: 120px;
-  font-size: 1.2rem;
-  line-height: 30px;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  color: rgba(255, 255, 255, 0.15);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  -webkit-transform-origin: left bottom;
-  -ms-transform-origin: left bottom;
-  transform-origin: left bottom;
-  position: absolute;
-  left: calc(30px + 15px);
-  top: -165px;
-}
-
-.menu-is-open .cl-go-top {
-  display: none;
-}
-
 /* ------------------------------------------------------------------- 
  * responsive:
  * contact
  * ------------------------------------------------------------------- */
- @media only screen and (max-width: 1600px) {
-  .cl-go-top {
-    right: 55px;
-  }
-}
 
 @media only screen and (max-width: 1200px) {
   .s-contact {
@@ -4089,23 +4013,6 @@ html.no-csstransitions .home-content__main {
   .contact-address {
     font-size: 2rem;
   }
-
-  .cl-go-top {
-    right: 35px;
-    bottom: 9rem;
-  }
-  .cl-go-top a {
-    height: 48px;
-    width: 48px;
-    line-height: 48px;
-  }
-  .cl-go-top a i {
-    font-size: 18px;
-  }
-  .cl-go-top::after {
-    font-size: 1.1rem;
-    left: calc(24px + 15px);
-  }
 }
 @media only screen and (max-width: 600px) {
   .s-contact {
@@ -4127,11 +4034,6 @@ html.no-csstransitions .home-content__main {
   .contact-social {
     font-size: 2rem;
   }
-
-  .cl-go-top {
-    right: 25px;
-    bottom: 7.2rem;
-  }
 }
 @media only screen and (max-width: 480px) {
   .contact-subscribe {
@@ -4149,18 +4051,6 @@ html.no-csstransitions .home-content__main {
     position: static;
     width: 100%;
     margin-bottom: 1.8rem;
-  }
-
-  .cl-go-top {
-    bottom: 0;
-    right: 50%;
-    margin-right: -24px;
-    margin-bottom: 10px;
-    
-  }
-  .cl-go-top::before,
-  .cl-go-top::after {
-    display: none;
   }
 }
 @media only screen and (max-width: 400px) {
