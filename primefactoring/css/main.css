@@ -1457,7 +1457,7 @@ input::-moz-focus-inner {
   font-family: "metropolis-regular", sans-serif;
   font-size: 1.3rem;
   line-height: 1.846;
-  padding: 3.6rem 3.6rem 3.6rem 3.6rem;
+  padding: 3.6rem 1.6rem 3.6rem 1.6rem;
   height: 100%;
   width: 500px;
   background: #0c0c0c;
@@ -1531,7 +1531,6 @@ input::-moz-focus-inner {
 .header-nav__content {
   background: #0c0c0c;
   position: relative;
-  left: -50px;
   opacity: 0;
   visibility: hidden;
 }
@@ -1587,7 +1586,8 @@ input::-moz-focus-inner {
   margin: 0;
   position: absolute;
   right: 0;
-  top: -50px;
+  top: -60px;
+  margin-right: 20px;
 }
 .header-nav__social li {
   display: inline-block;
@@ -1614,7 +1614,7 @@ input::-moz-focus-inner {
   border-radius: 3px;
   position: absolute;
   top: 50px;
-  left: 50px;
+  left: 30px;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
