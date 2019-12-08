@@ -1669,7 +1669,7 @@ input::-moz-focus-inner {
  * ## cliente area toggle 
  * ------------------------------------------------------------------- */
  .header-client-toggle {
-   right: 140px;
+   right: 80px;
    position: absolute;
    top: 23%;
    display: flex;
@@ -1712,7 +1712,7 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .header-menu-toggle {
   position: fixed;
-  left: 110px;
+  left: 70px;
   top: 42px;
   width: 48px;
   height: 45px;
@@ -1787,11 +1787,11 @@ input::-moz-focus-inner {
   }
 
   .header-menu-toggle {
-    left: 60px;
+    left: 30px;
   }
 
   .header-client-toggle {
-    right: 80px;
+    right: 40px;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -1804,11 +1804,11 @@ input::-moz-focus-inner {
   }
 
   .header-menu-toggle {
-    left: 40px;
+    left: 20px;
   }
   
   .header-client-toggle {
-    right: 60px;
+    right: 30px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -1827,20 +1827,20 @@ input::-moz-focus-inner {
 
   .header-menu-toggle {
     top: 30px;
-    left: 25px;
+    left: 15px;
   }
 
   .header-client-toggle {
-    right: 40px;
+    right: 25px;
   }
 }
 @media only screen and (max-width: 500px) {
-  .header-menu-toggle::before {
+  /* .header-menu-toggle::before {
     display: none;
-  }
+  } */
 
   .header-client-toggle {
-    right: 40px;
+    right: 20px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -1862,7 +1862,7 @@ input::-moz-focus-inner {
   }
 
   .header-client-toggle {
-    right: 25px;
+    right: 15px;
   }
 }
 
