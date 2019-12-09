@@ -1925,6 +1925,7 @@ input::-moz-focus-inner {
   color: #ffffff;
 }
 .home-content h1 + p {
+  height: 50px;
   font-family: "metropolis-light", sans-serif;
   font-size: 3.8rem;
   line-height: 1.421;
@@ -1945,14 +1946,8 @@ input::-moz-focus-inner {
 }
 
 #homeLogo {
-  /* transition: filter 0.5s ease-in; */
-  /* filter: brightness(0) invert(1); */
   width: 800px;
 }
-
-/* #homeLogo:hover {
-  filter: none;
-} */
 
 .highlight {
   color: #fff;
