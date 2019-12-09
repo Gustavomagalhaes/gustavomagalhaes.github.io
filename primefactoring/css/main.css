@@ -3761,6 +3761,12 @@ html.no-csstransitions .home-content__main {
   color: #000000;
 }
 
+@media only screen and (max-width: 600px) {
+  .s-back a {
+    line-height: 100px;
+  }
+}
+
 /* ===================================================================
  * # contact 
  *
