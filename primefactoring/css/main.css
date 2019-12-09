@@ -3941,7 +3941,8 @@ html.no-csstransitions .home-content__main {
 
 .cl-developed span {
   letter-spacing: 2px;
-  font-size: 10px;
+  font-size: 9px;
+  margin-right: 5px;
 }
 
 .cl-developed a {
