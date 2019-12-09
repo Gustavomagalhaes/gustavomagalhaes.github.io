@@ -3922,6 +3922,8 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 
  .credits {
+   padding-right: 15px;
+   padding-left: 15px;
    margin-top: 3rem;
    display: flex;
    align-items: center;
