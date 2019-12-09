@@ -3917,20 +3917,111 @@ html.no-csstransitions .home-content__main {
   padding-right: 6px;
 }
 
-
 /* ------------------------------------------------------------------- 
- * ## copyright
+ * ## Credits
  * ------------------------------------------------------------------- */
-.cl-copyright {
-  margin-top: 3rem;
-}
+
+ .credits {
+   margin-top: 3rem;
+   display: flex;
+   align-items: center;
+ }
 
 .cl-copyright span {
-  font-size: 15px;
+  font-size: 14px;
 }
 
-.cl-copyright span:last-child::after {
-  display: none;
+.cl-developed, .cl-copyright {
+  flex: 1;
+}
+
+.cl-developed {
+  text-align: right;
+}
+
+.cl-developed span {
+  letter-spacing: 2px;
+  font-size: 10px;
+}
+
+.cl-developed a {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.cl-developed a:hover {
+  color: #FFF;
+}
+
+/* -------------------------------------------------------------------
+ * ## Dev logo
+ * ------------------------------------------------------------------- */
+
+ .logo-frame {
+  position: relative;
+  display: inline-block;
+  margin-bottom: -10px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #23D5AB, #23A6D5, #6b00b6, #46049c);
+	background-size: 400% 400%;
+	animation: Gradient 7s ease infinite;
+}
+
+.logo-frame > img {
+  pointer-events: none;
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
+  &:after {
+    position: absolute;
+    content: "";
+    top: $y;
+    left: $x;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale($size);
+    -webkit-filter: blur($spread);
+    -moz-filter: blur($spread);
+    -ms-filter: blur($spread);
+    filter: blur($spread);
+    background: linear-gradient(270deg, $colorA, $colorB);
+    background-size: 200% 200%;
+    animation: animateGlow $duration ease infinite;
+    
+    @keyframes animateGlow {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .credits {
+    margin-top: 5rem;
+    height: 100px;
+    flex-direction: column;
+  }
+
+  .cl-copyright, .cl-developed {
+    text-align: center;
+  }
 }
 
 /* ------------------------------------------------------------------- 
@@ -4064,79 +4155,6 @@ html.no-csstransitions .home-content__main {
 
   .contact-number {
     font-size: 1.6rem;
-  }
-
-  .cl-copyright span {
-    font-size: 14px;
-  }
-  .cl-copyright span::after {
-    display: none;
-  }
-}
-
-/* -------------------------------------------------------------------
- * ## Dev logo
- * ------------------------------------------------------------------- */
-
-.logo-frame {
-  position: relative;
-  right: 0;
-  left: calc(50% - 15px);
-  bottom: 0;
-  margin-top: 15px;
-  width: 30px;
-  height: 30px;
-  overflow: hidden;
-  background: linear-gradient(-45deg, #23D5AB, #23A6D5, #6b00b6, #46049c);
-	background-size: 400% 400%;
-	animation: Gradient 7s ease infinite;
-}
-
-.logo-center {
-  position: absolute;
-}
-
-.logo-center > img {
-  pointer-events: none;
-}
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
-  &:after {
-    position: absolute;
-    content: "";
-    top: $y;
-    left: $x;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale($size);
-    -webkit-filter: blur($spread);
-    -moz-filter: blur($spread);
-    -ms-filter: blur($spread);
-    filter: blur($spread);
-    background: linear-gradient(270deg, $colorA, $colorB);
-    background-size: 200% 200%;
-    animation: animateGlow $duration ease infinite;
-    
-    @keyframes animateGlow {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }
   }
 }
 
