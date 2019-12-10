@@ -1888,6 +1888,7 @@ input::-moz-focus-inner {
   opacity: 0.4;
   background: linear-gradient(to bottom, black 0%, black 20%, transparent 100%);
 }
+
 .s-home::before {
   display: block;
   content: "";
@@ -3973,6 +3974,7 @@ html.no-csstransitions .home-content__main {
   height: 30px;
   overflow: hidden;
   background: linear-gradient(-45deg, #23D5AB, #23A6D5, #6b00b6, #46049c);
+  /* background: linear-gradient(-45deg,#23A6D5, #6b00b6, #46049c); */
 	background-size: 400% 400%;
 	animation: Gradient 7s ease infinite;
 }
