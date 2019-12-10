@@ -2011,10 +2011,12 @@ input::-moz-focus-inner {
 .highlight {
   color: #fff;
   text-decoration: none;
-  padding: 2px 5px;
+  padding: 2px 0px;
   /* background: var(--primary-color-blue); */
   /* background: rgba(0, 0, 0, 0.5); */
-  background: rgba(12,98,157, 0.4);
+  /* background: rgba(12,98,157, 0.4); */
+  /* background: var(--primary-color-blue); */
+  /* opacity: 0.4; */
 }
 
 .home-content__main {
