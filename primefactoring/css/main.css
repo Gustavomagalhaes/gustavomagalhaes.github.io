@@ -1453,11 +1453,20 @@ input::-moz-focus-inner {
  * ## main navigation 
  * ------------------------------------------------------------------- */
 .header-nav {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.header-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.header-nav {
   z-index: 900;
   font-family: "metropolis-regular", sans-serif;
   font-size: 1.3rem;
   line-height: 1.846;
-  padding: 3.6rem 1.6rem 3.6rem 1.6rem;
+  padding: 3.6rem 1.6rem 0rem 1.6rem;
   height: 100%;
   width: 500px;
   background: #0c0c0c;
