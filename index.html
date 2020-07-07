@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-
     <!--- basic page needs ================================================== -->
     <meta charset="utf-8">
     <title>Gustavo Magalhães</title>
@@ -15,6 +14,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mock.css">
 
     <!-- script ================================================== -->
     <script src="js/modernizr.js"></script>
@@ -437,23 +437,45 @@
         
     </section>
 
-    <svg class="line hide-all" x="0px" y="0px"
-        viewBox="100 0 920 142" style="enable-background:new 0 0 1031 142;" width="500px",height="144px",viewBox="0 0 1440 1440">
-        <defs>  
-            <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%" > 
-                <stop offset="0%" stop-color="#23D5AB">
-                    <animate attributeName="stop-color" values="#23D5AB; #23A6D5; #6b00b6; #46049c; #23D5AB" dur="7s" repeatCount="indefinite"></animate>
-                </stop>
-                <stop offset="100%" stop-color="#6b00b6">
-                    <animate attributeName="stop-color" values="#6b00b6; #46049c; #23A6D5; #23D5AB; #6b00b6" dur="7s" repeatCount="indefinite"></animate>
-                </stop>
-            </linearGradient> 
-        </defs>
-        <path fill="url('#logo-gradient')" d="M702.5,140c-125.6,0-249.7-42-315.3-68.5c-26.6-10.7-48.9-21.1-68.5-30.3C267.8,17.4,234.2,1.7,182.4,5.6
-            C122.3,10.1,63.6,39.7,8,93.6l-2.4-2.5c56.2-54.5,115.7-84.4,176.6-89c52.7-3.9,88.4,12.8,137.9,35.9c19.6,9.2,41.8,19.5,68.4,30.2
-            c70.7,28.5,209.4,75.1,344.3,67.4c101.2-5.8,201.3-43,297.6-110.7l2,2.9c-96.9,68-197.6,105.5-299.4,111.3
-            C722.8,139.7,712.6,140,702.5,140z"/>
-    </svg>
+    <!-- apps ================================================== -->
+    <section id='apps' class="s-apps">
+                
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead gradient-text">React Native</h3>
+                <h1 class="display-1">Mobile Apps</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class='row mock' data-aos="fade-in">
+            <div class="cover card">
+                <div class="card-layer" data-img="images/wte1.png"></div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <div data-aos="flip-up">
+        <svg class="line" x="0px" y="0px"
+            viewBox="100 -10 920 152" style="enable-background:new 0 0 1031 142;" width="500px",height="144px",viewBox="0 0 1440 1440">
+            <defs>  
+                <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%" > 
+                    <stop offset="0%" stop-color="#23D5AB">
+                        <animate attributeName="stop-color" values="#23D5AB; #23A6D5; #6b00b6; #46049c; #23D5AB" dur="7s" repeatCount="indefinite"></animate>
+                    </stop>
+                    <stop offset="100%" stop-color="#6b00b6">
+                        <animate attributeName="stop-color" values="#6b00b6; #46049c; #23A6D5; #23D5AB; #6b00b6" dur="7s" repeatCount="indefinite"></animate>
+                    </stop>
+                </linearGradient> 
+            </defs>
+            <path fill="url('#logo-gradient')" d="M702.5,140c-125.6,0-249.7-42-315.3-68.5c-26.6-10.7-48.9-21.1-68.5-30.3C267.8,17.4,234.2,1.7,182.4,5.6
+                C122.3,10.1,63.6,39.7,8,93.6l-10-10c56.2-54.5,115.7-84.4,176.6-89c52.7-3.9,88.4,12.8,137.9,35.9c19.6,9.2,41.8,19.5,68.4,30.2
+                c70.7,28.5,209.4,75.1,344.3,67.4c101.2-5.8,201.3-43,297.6-110.7l10,10c-96.9,68-197.6,105.5-299.4,111.3
+                C722.8,139.7,712.6,140,702.5,140z"/>
+        </svg>
+    </div>
+
 
     <!-- works ================================================== -->
     <section id='works' class="s-works hide-all">
@@ -708,7 +730,7 @@
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <!-- <h3 class="subhead subhead--light">Contate-nos</h3> -->
-                <h1 class="display-1 display-1--light">Contato</h1>
+                <h1 class="display-1">Contato</h1>
                 <!-- <p class="subtext">
                     Sinta-se à vontade para entrar em contato.
                 </p> -->
@@ -718,18 +740,28 @@
         <div class="row">
 
             <div class="col-full contact-main" data-aos="fade-up">
-                <h3 class="subhead subhead--light gradient-text">Email</h3>
+                <!-- <h3 class="subhead subhead--light gradient-text">Email</h3> -->
                 <p>
-                <a href="mailto:itsgustavopereira@gmail.com" class="contact-email">itsgustavopereira@gmail.com</a>
+                <a href="mailto:itsgustavopereira@gmail.com" class="contact-email gradient-text">itsgustavopereira@gmail.com</a>
                 <!-- <span class="contact-number">(81) 3040-5252  /  (81) 9 8918-8539
                     <a target="_blank" href="https://wa.me/5581989188539"><i class="fab fa-whatsapp"></i></a>
                 </span> -->
                 </p>
+                
+                <ul class="contact-social">
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/gustavomagalhaespereira"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/Gustavomagalhaes"><i class="fab fa-github"></i></a>
+                    </li>
+                </ul> <!-- end contact-social -->
             </div> <!-- end contact-main -->
+
 
         </div> <!-- end row -->
 
-        <div class="row">
+        <div class="row hide-all">
 
             <div class="col-five tab-full contact-secondary hide-all" data-aos="fade-up">
                 <h3 class="subhead subhead--light">Onde Nos Encontrar</h3>
@@ -747,7 +779,7 @@
             </div> <!-- end contact-secondary -->
 
             <div class="col-five tab-full contact-secondary" data-aos="fade-up">
-                <h3 class="subhead subhead--light gradient-text">Redes sociais</h3>
+                <!-- <h3 class="subhead gradient-text">Redes sociais</h3> -->
 
                 <ul class="contact-social">
                     <li>
@@ -776,7 +808,7 @@
         </div>
 
         <div class="cl-go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+            <a class="smoothscroll gradient-text" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
         </div>
 
     </section>
@@ -828,6 +860,7 @@
     <!-- Java Script ================================================== -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
+    <script src="js/card.js"></script>
     <script src="js/main.js"></script>
 
 </body>

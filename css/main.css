@@ -1,61 +1,18 @@
-/* =================================================================== 
- *
- *  Transcend v1.0 Main Stylesheet
- *  03-19-2018
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  # base style overrides
- *    ## links
- *  # typography & general theme styles
- *    ## Lists
- *    ## responsive video container
- *    ## floated image
- *    ## tables
- *    ## Spacing 
- *    ## pace.js styles - minimal
- *  # preloader
- *  # forms
- *    ## Style Placeholder Text
- *    ## Change Autocomplete styles in Chrome
- *  # buttons
- *  # additional components
- *    ## alert box
- *    ## additional typo styles
- *    ## skillbars
- *  # reusable and common theme styles
- *    ## display headings
- *  # header styles
- *    ## header logo
- *    ## main navigation
- *    ## mobile menu toggle 
- *  # home
- *    ## home content
- *    ## home sidelinks
- *    ## home scroll
- *    ## home scroll
- *    ## home animations
- *  # about
- *    ## about process
- *  # services
- *    ## services list
- *  # works
- *    ## bricks/masonry
- *  # testimonials
- *  # stats 
- *  # contact 
- *    ## contact social
- *    ## subscribe
- *    ## copyright
- *    ## go to top
- *
- * =================================================================== */
-
-
 /* ===================================================================
  * # base style overrides
  *
  * ------------------------------------------------------------------- */
+:root {
+  --background: #e3e8ed;
+	--shadowDark: #c1c5c9;
+  --shadowLight: #FFFFFF;
+  --primary-color-blue: #46049c;
+  /* --primary-color-blue: #0C629D; */
+  --secondary-color-blue: #11364D;
+  /* --highlight-color: #26bfb5; */
+  --highlight-color: #397BB8;
+}
+
 html {
   font-size: 10px;
 }
@@ -74,20 +31,14 @@ html, body {
 }
 
 body {
-  background: #111111;
+  background: var(--background);
   font-family: "metropolis-regular", sans-serif;
   font-size: 1.7rem;
   font-style: normal;
   font-weight: normal;
   line-height: 1.765;
-  color: #555555;
   margin: 0;
   padding: 0;
-  --primary-color-blue: #46049c;
-  /* --primary-color-blue: #0C629D; */
-  --secondary-color-blue: #11364D;
-  /* --highlight-color: #26bfb5; */
-  --highlight-color: #397BB8;
   
 }
 
@@ -1503,7 +1454,9 @@ input::-moz-focus-inner {
   pointer-events: none;
   width: 100%;
 }
+
 .line {
+  background: var(--background);
   width: 100%;
 }
 
@@ -2956,6 +2909,25 @@ html.no-csstransitions .home-content__main {
   }
 }
 
+/* ===================================================================
+ * # web
+ *
+ * ------------------------------------------------------------------- */
+ .s-web {
+  padding: 18rem 0 24rem;
+  position: relative;
+}
+
+
+/* ===================================================================
+ * # apps
+ *
+ * ------------------------------------------------------------------- */
+ .s-apps {
+  background: var(--background);
+  padding: 18rem 0 6rem;
+  position: relative;
+}
 
 
 /* ===================================================================
@@ -2963,7 +2935,7 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-works {
-  background: #ffffff;
+  background: var(--background);
   padding: 18rem 0 24rem;
   position: relative;
 }
@@ -3182,6 +3154,9 @@ html.no-csstransitions .home-content__main {
   .s-works {
     padding: 15rem 0 22.2rem;
   }
+  .s-apps, .s-web {
+    padding: 15rem 0 5rem;
+  }
 }
 @media only screen and (max-width: 1100px) {
   .masonry-wrap {
@@ -3199,6 +3174,10 @@ html.no-csstransitions .home-content__main {
     padding: 12rem 0 21rem;
   }
 
+  .s-apps, .s-web {
+    padding: 12rem 0 4.5rem;
+  }
+
   .masonry-wrap {
     margin-top: 3rem;
   }
@@ -3212,6 +3191,10 @@ html.no-csstransitions .home-content__main {
 @media only screen and (max-width: 400px) {
   .s-works {
     padding: 9.6rem 0 21rem;
+  }
+
+  .s-apps, .s-web {
+    padding: 9.6rem 0 4rem;
   }
 
   .masonry-wrap {
@@ -3487,14 +3470,13 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-contact {
-  padding-top: 21rem;
+  padding-top: 6rem;
   padding-bottom: 10.2rem;
-  background-color: #111111;
+  background: var(--background);
   color: rgba(255, 255, 255, 0.4);
   position: relative;
 }
 .s-contact a {
-  color: #ffffff;
   display: inline-block;
 }
 .s-contact a:hover, i:hover
@@ -3523,7 +3505,7 @@ html.no-csstransitions .home-content__main {
   font-family: "metropolis-light", sans-serif;
   font-size: 3.4rem;
   line-height: 1.222;
-  color: #ffffff;
+  /* color: #000000; */
   /* padding-top: 3.6rem; */
   position: relative;
 }
@@ -3572,12 +3554,12 @@ html.no-csstransitions .home-content__main {
   display: inline-block;
 }
 .contact-social li a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.3);
   border: none !important;
 }
 .contact-social li a:hover,
 .contact-social li a:focus {
-  color: #ffffff;
+  color: #000000;
 }
 .contact-social li:last-child {
   margin: 0;
@@ -3651,6 +3633,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .cl-copyright {
   margin-top: 2.1rem;
+  color: #000000;
 }
 
 .cl-copyright span {
@@ -3686,7 +3669,7 @@ html.no-csstransitions .home-content__main {
   line-height: 60px;
   text-align: center;
   /* background: black; */
-  color: white;
+  color: black;
   text-align: center;
   text-transform: uppercase;
   border-radius: 50%;
@@ -3699,8 +3682,8 @@ html.no-csstransitions .home-content__main {
 }
 .cl-go-top a:hover,
 .cl-go-top a:focus {
-  background-color: #ffffff;
-  color: #000000;
+  background: #ffffff;
+  /* color: #000000; */
 }
 /* .cl-go-top::before {
   content: "";
@@ -3720,7 +3703,7 @@ html.no-csstransitions .home-content__main {
   line-height: 30px;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  color: rgba(255, 255, 255, 0.15);
+  color: rgba(0, 0, 0, 0.15);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transform: rotate(-90deg);
@@ -3749,7 +3732,7 @@ html.no-csstransitions .home-content__main {
 }
 @media only screen and (max-width: 1200px) {
   .s-contact {
-    padding-top: 15rem;
+    padding-top: 4rem;
   }
 
   .contact-main {
@@ -3795,7 +3778,7 @@ html.no-csstransitions .home-content__main {
 }
 @media only screen and (max-width: 800px) {
   .s-contact {
-    padding-top: 12rem;
+    padding-top: 3.5rem;
     padding-bottom: 9rem;
   }
 
@@ -3839,7 +3822,7 @@ html.no-csstransitions .home-content__main {
 }
 @media only screen and (max-width: 600px) {
   .s-contact {
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
   }
 
   .contact-main {
@@ -3891,7 +3874,7 @@ html.no-csstransitions .home-content__main {
 }
 @media only screen and (max-width: 400px) {
   .s-contact {
-    padding-top: 9.6rem;
+    padding-top: 2.5rem;
     padding-bottom: 3rem;
   }
 
@@ -3925,7 +3908,7 @@ html.no-csstransitions .home-content__main {
   }
 
   .cl-go-top {
-    bottom: 12rem;
+    bottom: 8rem;
     right: 50%;
     margin-right: -24px;
   }
