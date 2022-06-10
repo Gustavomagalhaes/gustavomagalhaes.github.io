@@ -244,8 +244,6 @@ a.fade:hover {
     opacity: 0.60;
     filter: alpha(opacity=60);
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-    
-
 }
 
 img.prop {
@@ -258,6 +256,11 @@ img.prop:hover {
     opacity: 0.75;
     filter: alpha(opacity=75);
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";  
+}
+
+.float-video {
+	padding-left: 20px;
+	float: right;
 }
 
 /*~~~~~~~~~~~ Slide ~~~~~~~~~~~~~~*/
