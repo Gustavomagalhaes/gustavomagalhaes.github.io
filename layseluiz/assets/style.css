@@ -269,6 +269,18 @@ img.prop:hover {
 	float: right;
 }
 
+.video-container p {
+	text-align: justify;
+}
+
+.directions p {
+	text-align: justify;
+}
+
+.rsvp-title {
+	font-family: "century-gothic";
+}
+
 /*~~~~~~~~~~~ Slide ~~~~~~~~~~~~~~*/
 
 @keyframes  fade {
