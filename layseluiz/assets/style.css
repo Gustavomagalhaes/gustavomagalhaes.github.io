@@ -366,13 +366,13 @@ p a, blockquote a {
     color: rgb(80,93,62); /*  primary */
     background-color: none;
     text-decoration: none;
+    transition: color .2s ease-in; /*safari and chrome */
     -webkit-transition: color .2s ease-in; /*safari and chrome */
     -o-transition: color .2s ease-in; /* opera */
 }
 
 p a:hover, blockquote a:hover {
     color:rgb(80,93,62); /*  primary */
-
 }
 
 p {
@@ -548,6 +548,7 @@ blockquote {
 	font-style: italic;
 	background: #fff;
 	padding: 20px;
+	max-height: 164px;
 }
 
 blockquote strong {
