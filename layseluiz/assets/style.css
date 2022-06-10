@@ -258,8 +258,14 @@ img.prop:hover {
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";  
 }
 
-.float-video {
+.video-container {
+	clear:both;
+}
+
+.video-container .video-wrapper {
+	position:relative;
 	padding-left: 20px;
+	padding-bottom: 20px;
 	float: right;
 }
 
