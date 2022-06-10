@@ -236,6 +236,7 @@ body {
 }
 
 a.fade {
+    transition: opacity .2s ease-in; /*safari and chrome */
     -webkit-transition: opacity .2s ease-in; /*safari and chrome */
     -o-transition: opacity .2s ease-in; /* opera */}
 
@@ -248,8 +249,9 @@ a.fade:hover {
 
 img.prop {
 	margin-bottom: 20px;
+	transition: opacity .2s ease-in; /*safari and chrome */
 	-webkit-transition: opacity .2s ease-in; /*safari and chrome */
-    -o-transition: opacity .2s ease-in; /* opera */
+	-o-transition: opacity .2s ease-in; /* opera */
 }
 
 img.prop:hover {
@@ -283,13 +285,15 @@ img.prop:hover {
 
 /*~~~~~~~~~~~ Slide ~~~~~~~~~~~~~~*/
 
-@keyframes  fade {
-	0%{opacity: 0}
-	50%{opacity: 1}
-	100%{opacity: 0}
+@keyframes fade {
+	0%{opacity: 0.1}
+	20%{opacity: 1}
+	80%{opacity: 1}
+	100%{opacity: 0.1}
 }
 
 #slideshow {
+	background-color: #000;
   display:flex;
   justify-content:center;
   align-items: center;
@@ -301,7 +305,7 @@ img.prop:hover {
 }
 .slide-item.show {
   display:block;
-	animation: fade 4s ease-in-out infinite;
+	animation: fade 5s ease-in-out infinite;
 }
 
 /*~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~*/
@@ -361,19 +365,6 @@ border-bottom: 5px solid rgb(80,93,62); /*  primary */
 
 
 /*~~~~~~~ AND SO WE BEGIN ~~~~~~~*/
-
-p a, blockquote a {
-    color: rgb(80,93,62); /*  primary */
-    background-color: none;
-    text-decoration: none;
-    transition: color .2s ease-in; /*safari and chrome */
-    -webkit-transition: color .2s ease-in; /*safari and chrome */
-    -o-transition: color .2s ease-in; /* opera */
-}
-
-p a:hover, blockquote a:hover {
-    color:rgb(80,93,62); /*  primary */
-}
 
 p {
 	color: rgb(80,93,62); /*  primary */;
@@ -552,27 +543,14 @@ ul.details li {
 	text-align: justify;
 }
 
+.quote a {
+	color: rgb(80,93,62); /*  primary */
+	text-decoration: none;
+}
+
 .quote strong {
 	font-family: "century gothic bold";	
 }
-
-/* blockquote {
-	color: rgb(80,93,62);
-	font-family: "century gothic";
-	font-style: normal;
-	font-weight: 400;
-	font-size: 21px;
-	line-height: 31px;
-	margin: 0 0 15px 0;
-	letter-spacing: .04em;
-	font-style: italic;
-	background: #fff;
-	padding: 20px;
-} */
-
-/* blockquote strong {
-	font-family: "century gothic bold";
-} */
 
 .top {
 	max-width: 100%;
