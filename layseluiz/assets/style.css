@@ -1,0 +1,580 @@
+/* start reset */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary {
+	display:block;
+}
+
+ul, dl {
+	list-style:none;
+	width:100%;
+}
+
+a {
+	text-decoration:none;
+	background: none;
+}
+
+html,body {
+	margin:0;padding:0;
+}
+
+/* end reset */
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Fonts */
+
+@font-face {
+	font-family: 'century gothic'; 
+	src: url('./fonts/century-gothic/CenturyGothicPaneuropeanRegular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'century gothic bold'; 
+	src: url('./fonts/century-gothic/CenturyGothicPaneuropeanBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'dahlia bold'; 
+	src: url('./fonts/dahlia-font/dahlia-bold.otf');
+	src: url('./fonts/dahlia-font/dahlia-bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'dahlia medium'; 
+	src: url('./fonts/dahlia-font/dahlia-medium.otf');
+	src: url('./fonts/dahlia-font/dahlia-medium.woff') format('woff');
+}
+
+
+/*
+Colors:
+
+primary: rgb(80,93,62); 
+secondary: rgb(235,233,227);
+primary hover: #414835;
+*/
+
+
+body {
+	background-color:rgb(235,233,227); /* secondary */
+}
+
+.container {
+	width:960px;
+	height:auto;
+	margin:0px auto;
+	padding:0px;
+	clear:both;
+}
+
+/* columns */
+
+.onecol,
+.twocol,
+.threecol,
+.fourcol {
+	height:auto;
+	float:left;
+	margin:0 1.234567901235%; /* 10px / 810 */
+	padding:0;
+}
+
+.onecol {
+	width: 940px;
+	height: auto;
+	float: left;
+	margin: 0 10px;
+}
+
+.twocol {
+	width: 460px;
+	height: auto;
+	float: left;
+	margin: 0 10px;
+}
+
+.threecol {
+	width: 300px;
+	height: auto;
+	float: left;
+	margin: 0 10px;
+}
+
+.fourcol {
+	width: 220px;
+	height: auto;
+	float: left;
+	margin: 0 10px;
+}
+
+.direction-header {
+	width: 780px;
+	height: auto;
+	float: left;
+	margin: 0 10px;
+}
+
+
+.directions {
+	width: 380px;
+	height: auto;
+	float: left;
+	margin: 0 10px;
+}
+
+
+.fourcol-prop {
+	background:rgb(80,93,62); /*  primary */
+	padding:30px 0 0 0;
+	height:135px;
+	-webkit-transition: background-color .25s ease-in; /*safari and chrome */
+ 	-o-transition: background-color .25s ease-in; /* opera */
+}
+
+.prop {
+	background-color: #000;
+	height:165px;
+	margin-bottom: 20px;
+}
+
+.fourcol-prop:hover {
+	background: #414835; /* primary hover */
+	cursor: pointer;
+}
+
+.fivecol {
+    width: 172px;
+    height: auto;
+    float: left;
+    margin: 0 10px;
+}
+
+.sixcol {
+    width: 140px;
+    height: auto;
+    float: left;
+    margin: 0 10px;
+}
+
+.threecol_2 {
+    width: 620px;
+    height: auto;
+    float: left;
+    margin: 0 10px;
+}
+
+.fourcol_3 {
+    width: 700px;
+    height: auto;
+    float: left;
+    margin: 0 10px;
+}
+
+.fivecol_3 {
+    width: 556px;
+    height: auto;
+    float: left;
+    margin: 0 10px;
+}
+
+.twelvecol {
+    width: 60px;
+    height: auto;
+    float: left;
+    margin: 0 10px;
+}
+
+.twelvecol_5 {
+    width: 380px;
+    height: auto;
+    float: left;
+    margin: 0 10px;
+}
+
+.twelvecol_7 {
+    width: 540px;
+    height: auto;
+    float: left;
+    margin: 0 10px;
+}
+
+.slidescol {
+    width: 800px;
+    height: auto;
+    float: left;
+    margin: 0 10px;
+}
+
+.bump {
+	width: 100%;
+	height: 30px;
+	clear:both;
+}
+
+a.fade {
+    -webkit-transition: opacity .2s ease-in; /*safari and chrome */
+    -o-transition: opacity .2s ease-in; /* opera */}
+
+a.fade:hover {
+    border: none;
+    opacity: 0.60;
+    filter: alpha(opacity=60);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    
+
+}
+
+img.prop {
+	margin-bottom: 20px;
+	-webkit-transition: opacity .2s ease-in; /*safari and chrome */
+    -o-transition: opacity .2s ease-in; /* opera */
+}
+
+img.prop:hover {
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";  
+}
+
+/*~~~~~~~~~~~ Slide ~~~~~~~~~~~~~~*/
+
+@keyframes  fade {
+	0%{opacity: 0}
+	50%{opacity: 1}
+	100%{opacity: 0}
+}
+
+#slideshow {
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+.slide-item {
+  display:none;
+  width:800px;
+  height:530px;
+}
+.slide-item.show {
+  display:block;
+	animation: fade 4s ease-in-out infinite;
+}
+
+/*~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~*/
+
+#menu {
+	
+	margin: -33px auto 0 auto;
+	text-align: center;
+	height: auto;
+	padding: 19px 0 19px 0;
+	font-family: "dahlia medium";
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 26px;
+	text-transform: uppercase;
+	letter-spacing: -.03em;
+}
+
+
+li#menunav {
+	display:inline;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+#menunav a {
+	color:rgb(80,93,62); /*  primary */;
+	margin:0 7px;
+}
+
+
+#menunav a:hover {
+	border-bottom: 5px solid rgb(80,93,62); /*  primary */
+}
+
+body#home a#homenav,
+body#proposal a#proposalnav,
+body#rsvp a#rsvpnav,
+body#details a#detailsnav,
+body#registry a#registrynav,
+body#services a#servicesnav {
+color: rgb(80,93,62); /*  primary */;
+border-bottom: 5px solid rgb(80,93,62); /*  primary */
+}
+
+
+::selection {
+    background:rgb(80,93,62); /*  primary */
+}
+::-moz-selection {
+    background:rgb(80,93,62); /*  primary */
+}
+::-webkit-selection {
+    background:rgb(80,93,62); /*  primary */
+}
+
+
+/*~~~~~~~ AND SO WE BEGIN ~~~~~~~*/
+
+p a, blockquote a {
+    color: rgb(80,93,62); /*  primary */
+    background-color: none;
+    text-decoration: none;
+    -webkit-transition: color .2s ease-in; /*safari and chrome */
+    -o-transition: color .2s ease-in; /* opera */
+}
+
+p a:hover, blockquote a:hover {
+    color:rgb(80,93,62); /*  primary */
+
+}
+
+p {
+	color: rgb(80,93,62); /*  primary */;
+	font-family: "century gothic";
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0 0 15px 0;
+}
+
+h1 {
+	font-family: "dahlia medium";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 36px;
+	color: rgb(80,93,62); /*  primary */
+	line-height: 43px;
+	text-transform: uppercase;
+	letter-spacing: -.03em;
+}
+
+h1.profile {
+	font-family: "dahlia medium";
+	color: rgb(80,93,62); /*  primary */
+	width:100%;
+	margin: 15px 0;
+	font-size: 28px;
+	line-break: 28px;
+}
+
+h2 {
+	font-family: "dahlia medium";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	color: rgb(80,93,62); /*  primary */
+	line-height: 36px;
+	text-transform: uppercase;
+	letter-spacing: -.03em;
+}
+
+h3 {
+	font-family: "dahlia medium";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 26px;
+	color: rgb(80,93,62); /*  primary */;
+	line-height: 30px;
+	text-transform: uppercase;
+	letter-spacing: -.03em;
+}
+
+h4 {
+	font-family: "dahlia medium";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	color: rgb(80,93,62); /*  primary */
+	line-height: 30px;
+	text-transform: uppercase;
+	letter-spacing: -.03em;
+}
+
+h5 {
+	font-family: "dahlia medium";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	color: rgb(80,93,62); /*  primary */
+	line-height: 25px;
+	text-transform: uppercase;
+	letter-spacing: -.03em;
+}
+
+h2 a, h3 a {
+    color: rgb(80,93,62); /* primary */
+    text-decoration: none;
+    -webkit-transition: color .2s ease-in; /*safari and chrome */
+    -o-transition: color .2s ease-in; /* opera */
+}
+
+h2 a:hover, h3 a:hover {
+	color: rgb(80,93,62); /* primary */;
+}
+
+ul.details li {
+	list-style-type: disc;
+	color: #333;
+	font-family: "century gothic";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0 0 15px -20px;
+}
+
+/*~~~~~~~~~~~ Countdown ~~~~~~~~~~~~~~*/
+
+#countdown {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+	width: 100%;
+	height: 100%;
+  text-transform:uppercase;
+}
+
+.countdown-wrap h1 {
+	font-family: "dahlia bold";
+	color:#FFF;
+	text-align: center;
+	font-size:40px;
+}
+
+.number { 
+	font-family: "dahlia bold";
+	color:#FFF;
+	text-align: center;
+  font-size:80px;
+}
+
+.number-prefix { 
+	font-family: "dahlia bold";
+	color:#FFF;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 5px;
+  font-size:26px;
+}
+
+.number-sufix { 
+	font-family: "dahlia bold";
+	color:#FFF;
+	text-align: center;
+	padding-top: 15px;
+  font-size:30px;
+}
+
+.count {
+	background:rgb(80,93,62); /* primary */;
+	width:100%;
+	height:164px;
+	-webkit-transition: background-color .25s ease-in; /*safari and chrome */
+ 	-o-transition: background-color .25s ease-in; /* opera */
+}
+
+.count:hover {
+	background: #414835; /* primary hover */
+	cursor:pointer;
+}
+
+
+.mapouter {
+	border: 5px solid #fff;
+}
+
+.map-link {
+	color: rgb(80,93,62); /*  primary */
+	font-family: "century gothic";
+	line-height: 2.5em;
+}
+
+
+blockquote {
+	color: rgb(80,93,62); /*  primary */
+	font-family: "century gothic";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 21px;
+	line-height: 31px;
+	margin: 0 0 15px 0;
+	letter-spacing: .04em;
+	font-style: italic;
+	background: #fff;
+	padding: 20px;
+}
+
+blockquote strong {
+	font-family: "century gothic bold";
+}
+
+.top {
+	max-width: 100%;
+	width:100%;
+	height:auto;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.top img {
+	width:100%;
+	max-width: 100%;
+	z-index:-9999;
+}
+
+.footer {
+	width:100%;
+	height: 85px;
+	margin: 0 auto;
+	background-image: url("footer.svg");
+}
+
+.footer img {
+	margin-top: 10px;
+}
+
+input.text, input.search, textarea.textarea {
+	border: none;
+	-moz-border-radius-bottomright: 3px 3px;
+	border-bottom-right-radius: 3px 3px;
+	background-color: #ccc;
+	height:20px;
+	padding: 10px 0;
+	border-top: 0px;
+	background: #ededed;
+}
+
+.wufoo label.desc, .wufoo legend.desc {
+	text-transform: uppercase;
+}
+
+.nomar {
+	font-size: 24px;
+	color: rgb(80,93,62); /*  primary */
+	margin:0;
+}
