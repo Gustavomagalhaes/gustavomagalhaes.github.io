@@ -535,9 +535,29 @@ ul.details li {
 	line-height: 2.5em;
 }
 
+.quote {
+	height: 164px;
+	background-color: #fff;
+}
 
-blockquote {
+.quote p {
 	color: rgb(80,93,62); /*  primary */
+	font-family: "century gothic";
+	font-size: 21px;
+	line-height: 31px;
+	margin: 0 0 15px 0;
+	letter-spacing: .04em;
+	font-style: italic;
+	padding: 20px;
+	text-align: justify;
+}
+
+.quote strong {
+	font-family: "century gothic bold";	
+}
+
+/* blockquote {
+	color: rgb(80,93,62);
 	font-family: "century gothic";
 	font-style: normal;
 	font-weight: 400;
@@ -548,12 +568,11 @@ blockquote {
 	font-style: italic;
 	background: #fff;
 	padding: 20px;
-	max-height: 164px;
-}
+} */
 
-blockquote strong {
+/* blockquote strong {
 	font-family: "century gothic bold";
-}
+} */
 
 .top {
 	max-width: 100%;
