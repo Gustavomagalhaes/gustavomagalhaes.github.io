@@ -151,6 +151,7 @@ body {
 	background:rgb(80,93,62); /*  primary */
 	padding:30px 0 0 0;
 	height:135px;
+	transition: background-color .25s ease-in; /*safari and chrome */
 	-webkit-transition: background-color .25s ease-in; /*safari and chrome */
  	-o-transition: background-color .25s ease-in; /* opera */
 }
@@ -279,8 +280,214 @@ img.prop:hover {
 	text-align: justify;
 }
 
-.rsvp-title {
-	font-family: "century-gothic";
+.page-title {
+	font-size: 20px;
+	font-family: "century gothic";
+}
+
+.page-title.centered {
+	width: 960px;
+	text-align: center;
+}
+
+/*~~~~~~~~~~~ Form ~~~~~~~~~~~~~~*/
+
+/* Change the white to any color */
+input:-webkit-autofill::first-line,
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+	box-shadow: 0 0 0 30px white inset !important;
+	-webkit-box-shadow: 0 0 0 30px white inset !important;
+	-webkit-text-fill-color: rgb(80,93,62) !important;
+	font-family: "century gothic";
+	font-size: 18px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	/* width: 500px; */
+	align-items: center;
+}
+
+.input {
+	width: 470px;
+	height: 60px;
+	padding: 0 15px;
+	border: none;
+	outline: 1px solid #ddd; /* primary */
+	font-size: 18px;
+	font-family: "century gothic";
+	color: rgb(80,93,62); /* primary */
+}
+
+.input::placeholder {
+	color: rgb(80,93,62); /* primary */
+}
+
+#attendance_inputs {
+	display: flex;
+	flex-direction: row;
+	width: 500px;
+	height: 60px;
+}
+
+#attendance_inputs p {
+	height: 60px;
+	line-height: 60px;
+	flex: 1;
+	font-size: 18px;
+	font-family: "century gothic";
+	color: rgb(80,93,62); /* primary */
+}
+
+/* CUSTOM RADIO */
+
+/* The container */
+.check-wrapper {
+  display: block;
+  position: relative;
+	height: 22px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-left: 40px;
+	margin-top: 15px;
+	margin-left: 20px;
+	padding-top: 4px;
+	font-size: 20px !important;
+	font-family: "century gothic";
+	color: rgb(80,93,62); /* primary */
+}
+
+/* Hide the browser's default radio button */
+.check-wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+	border: 1px solid rgb(80,93,62); /* primary */
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.check-wrapper:hover input ~ .checkmark {
+  background-color: #ddd;
+}
+
+/* When the radio button is checked, add a blue background */
+.check-wrapper input:checked ~ .checkmark {
+  background-color: rgb(80,93,62); /* primary */
+	border: 1px solid rgb(80,93,62); /* primary */
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.check-wrapper input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.check-wrapper .checkmark:after {
+ 	top: 8px;
+	left: 8px;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* CUSTOM RADIO END */
+
+#attendance_inputs label {
+	font-size: 18px;
+	font-family: "century gothic";
+	color: rgb(80,93,62); /* primary */
+}
+
+#guests_inputs {
+	display: flex;
+	flex-direction: row;
+	width: 500px;
+	height: 60px;
+}
+
+#guests_inputs p {
+	height: 60px;
+	line-height: 60px;
+	flex: 1;
+	font-size: 18px;
+	font-family: "century gothic";
+	color: rgb(80,93,62); /* primary */
+}
+
+#guests_inputs select {
+	height: 60px;
+	width: 100px;
+	padding: 0 15px;
+	border: none;
+	outline: 1px solid #ddd; /* primary */
+	font-size: 18px;
+	font-family: "century gothic";
+	color: rgb(80,93,62); /* primary */
+}
+
+#guests_inputs select::placeholder {
+	color: rgb(80,93,62); /* primary */
+}
+
+#contact_inputs {
+	width: 500px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+.input.ddd {
+	width: 70px;
+}
+
+.input.telefone {
+	width: 340px;
+}
+
+.input:focus {
+	outline: 1px solid rgb(80,93,62); /* primary */
+}
+
+#submit {
+	background-color: rgb(80,93,62); /* primary */
+	color: #fff;
+	font-size: 18px;
+	font-family: "century gothic";
+	height: 60px;
+	width: 350px;
+	border: none;
+	cursor: pointer;
+}
+
+#submit:hover,
+#submit:focus {
+    background: #414835; /* primary darker */
 }
 
 /*~~~~~~~~~~~ Slide ~~~~~~~~~~~~~~*/
