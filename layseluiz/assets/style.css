@@ -308,6 +308,48 @@ img.prop:hover {
 	animation: fade 5s ease-in-out infinite;
 }
 
+/*~~~~~~~~~~~ ONDE FICAR ~~~~~~~~~~~~~~*/
+
+.shadow {
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.places {
+	display: flex;
+	width: 940px;
+	height: auto;
+	float: left;
+	margin: 0 10px;
+}
+
+.place {
+	flex: 1;
+	background-color: #fff;
+}
+
+.place img {
+	width: 300px;
+	height: 225px;
+}
+
+.place-title {
+	color: rgb(80,93,62); /*  primary */
+	font-family: "dahlia medium";
+	font-size: 28px;
+	line-height: 28px;
+}
+
+.place p {
+	padding: 0 8px;
+	margin: 0 0 10px 0;
+}
+
+.place-separator {
+	width: 20px;
+}
+
 /*~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~*/
 
 #menu {
@@ -513,11 +555,6 @@ ul.details li {
 .count:hover {
 	background: #414835; /* primary hover */
 	cursor:pointer;
-}
-
-
-.mapouter {
-	border: 5px solid #fff;
 }
 
 .map-link {
