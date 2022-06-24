@@ -272,14 +272,6 @@ img.prop:hover {
 	float: right;
 }
 
-.video-container p {
-	text-align: justify;
-}
-
-.directions p {
-	text-align: justify;
-}
-
 .page-title {
 	font-size: 20px;
 	font-family: "century gothic";
@@ -318,6 +310,7 @@ form {
 	padding: 0 15px;
 	border: none;
 	outline: 1px solid #ddd; /* primary */
+	border-radius: 2px;
 	font-size: 18px;
 	font-family: "century gothic";
 	color: rgb(80,93,62); /* primary */
@@ -445,6 +438,7 @@ form {
 	padding: 0 15px;
 	border: none;
 	outline: 1px solid #ddd; /* primary */
+	border-radius: 2px;
 	font-size: 18px;
 	font-family: "century gothic";
 	color: rgb(80,93,62); /* primary */
@@ -460,7 +454,6 @@ form {
 	flex-direction: row;
 	justify-content: space-between;
 }
-
 
 .input.ddd {
 	width: 70px;
@@ -482,6 +475,7 @@ form {
 	height: 60px;
 	width: 350px;
 	border: none;
+	border-radius: 2px;
 	cursor: pointer;
 }
 
@@ -549,12 +543,26 @@ form {
 }
 
 .place p {
-	padding: 0 8px;
-	margin: 0 0 10px 0;
+	padding: 0 10px;
+	margin: 12px 0 12px 0;
 }
 
 .place-separator {
 	width: 20px;
+}
+
+/*~~~~~~~~~~~ Traje ~~~~~~~~~~~~~~*/
+
+.traje {
+	/* width: 940px; */
+	width: 380px;
+	height: auto;
+	float: left;
+	margin: 0 10px;
+}
+
+.traje img {
+	width: 780px;
 }
 
 /*~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~*/
@@ -621,6 +629,7 @@ p {
 	font-size: 16px;
 	line-height: 24px;
 	margin: 0 0 15px 0;
+	text-align: justify;
 }
 
 h1 {
@@ -784,7 +793,6 @@ ul.details li {
 	letter-spacing: .04em;
 	font-style: italic;
 	padding: 20px;
-	text-align: justify;
 }
 
 .quote a {
