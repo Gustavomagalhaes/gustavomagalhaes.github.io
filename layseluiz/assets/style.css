@@ -410,6 +410,37 @@ form {
 
 /* CUSTOM RADIO END */
 
+/* PROFILE START */
+
+#lays {
+	width: 460px;
+	height: 320px;
+	margin: 0 auto;
+	background-image: url("lays1.png");
+}
+
+#lays:hover {
+	width: 460px;
+	height: 320px;
+	margin: 0 auto;
+	background-image: url("lays2.png");
+}
+
+#luiz {
+	width: 460px;
+	height: 320px;
+	margin: 0 auto;
+	background-image: url("luiz1.png");
+}
+
+#luiz:hover {
+	width: 460px;
+	height: 320px;
+	margin: 0 auto;
+	background-image: url("luiz2.png");
+}
+/* PROFILE END */
+
 #attendance_inputs label {
 	font-size: 18px;
 	font-family: "century gothic";
