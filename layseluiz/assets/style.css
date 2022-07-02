@@ -554,7 +554,6 @@ form {
 /*~~~~~~~~~~~ Traje ~~~~~~~~~~~~~~*/
 
 .traje {
-	/* width: 940px; */
 	width: 380px;
 	height: auto;
 	float: left;
@@ -562,7 +561,7 @@ form {
 }
 
 .traje img {
-	width: 780px;
+	width: 700px;
 }
 
 /*~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~*/
