@@ -882,3 +882,12 @@ input.text, input.search, textarea.textarea {
 	color: rgb(80,93,62); /*  primary */
 	margin:0;
 }
+
+.weddingdate {
+	color: rgb(80,93,62); /*  primary */;
+	font-family: "century gothic";
+	font-size: 12px;
+	line-height: 16px;
+	margin: 10px 0 15px 0;
+	text-align: left;
+}
