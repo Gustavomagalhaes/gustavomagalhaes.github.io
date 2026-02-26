@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scoreboard</title>
+
+<meta name="theme-color" id="themeColor" content="#020617">
+<link rel="manifest" href="manifest.json">
+
+<style>
+:root{
+  --bg:#020617;
+  --text:#ffffff;
+
+  --blue:#2563eb;
+  --red:#dc2626;
+
+  --blue-bg:rgba(37,99,235,.08);
+  --red-bg:rgba(220,38,38,.08);
+
+  --panel:rgba(255,255,255,.2);
+}
+
+body.light{
+  --bg:#f8fafc;
+  --text:#020617;
+  --panel:rgba(0,0,0,.15);
+}
+
+*{
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  height:100vh;
+  overflow:hidden;
+}
+
+/* TOP SETS */
+.top{
+  position:absolute;
+  top:2vh;
+  left:0;
+  right:0;
+  display:flex;
+  z-index:10;
+}
+
+.logo{
+  position:absolute;
+  top:1vh;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:center;
+  z-index:10;
+  pointer-events:none;
+}
+.logo img{
+  width:clamp(120px, 18vw, 360px);
+  height:auto;
+  max-height:18vw;
+  aspect-ratio:1/1;
+}
+
+.set-group{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:1vh;
+}
+
+.set-value{
+  font-size:clamp(1.8rem, 4vh, 2.8rem);
+  min-width:40px;
+  text-align:center;
+  font-weight:bold;
+}
+
+.set-group button{
+  width:40px;
+  height:40px;
+  border-radius:8px;
+  border:none;
+  background:var(--panel);
+  color:var(--text);
+  font-size:1.8rem;
+  display:none;
+}
+
+.set-group.active button{
+  display:inline-block;
+}
+
+/* MAIN */
+.main{
+  display:flex;
+  height:100%;
+}
+
+/* SIDE */
+.side{
+  flex:1;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+.side.blue{ background:var(--blue-bg); }
+.side.red{ background:var(--red-bg); }
+
+/* SCORE */
+.score{
+  font-size:clamp(14rem, 50vh, 36rem);
+  font-weight:bold;
+  line-height:1;
+  pointer-events:none;
+}
+
+.score.blue{ color:var(--blue); }
+.score.red{ color:var(--red); }
+
+/* TOUCH ZONES */
+.zone{
+  position:absolute;
+  inset:0;
+  display:none;
+  flex-direction:column;
+}
+
+.zone.active{ display:flex; }
+.zone div{ flex:1; }
+
+/* CONTROLS */
+.controls{
+  position:absolute;
+  bottom:2vh;
+  left:50%;
+  transform:translateX(-50%);
+  display:none;
+  gap:2vh;
+  z-index:10;
+}
+
+.controls.active{ display:flex; }
+
+.controls button{
+  font-size:1rem;
+  padding:1vh 2vh;
+  background:var(--panel);
+  border:none;
+  border-radius:8px;
+  color:var(--text);
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP SETS -->
+<div class="top">
+  <div class="set-group" id="setGroupLeft">
+    <button onclick="changeSet('left', -1)">−</button>
+    <div class="set-value" id="setLeft">0</div>
+    <button onclick="changeSet('left', 1)">+</button>
+  </div>
+
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+  </div>
+
+  <div class="set-group" id="setGroupRight">
+    <button onclick="changeSet('right', -1)">−</button>
+    <div class="set-value" id="setRight">0</div>
+    <button onclick="changeSet('right', 1)">+</button>
+  </div>
+</div>
+
+<div class="main" id="main">
+  <div class="side blue" id="leftSide">
+    <div class="zone" id="zoneLeft">
+      <div onclick="addScore('left')"></div>
+      <div onclick="subScore('left')"></div>
+    </div>
+    <div class="score blue" id="scoreLeft">0</div>
+  </div>
+
+  <div class="side red" id="rightSide">
+    <div class="zone" id="zoneRight">
+      <div onclick="addScore('right')"></div>
+      <div onclick="subScore('right')"></div>
+    </div>
+    <div class="score red" id="scoreRight">0</div>
+  </div>
+</div>
+
+<div class="controls" id="controls">
+  <button onclick="confirmNewGame()">Novo Jogo</button>
+  <button onclick="confirmReset()">Resetar Tudo</button>
+  <button onclick="swapSides()">Inverter</button>
+  <button onclick="toggleTheme()">Tema</button>
+</div>
+
+<script>
+const defaultState = {
+  left:{score:0, sets:0, color:'blue'},
+  right:{score:0, sets:0, color:'red'},
+  theme:'dark'
+};
+
+let state = JSON.parse(localStorage.getItem('scoreboard')) || structuredClone(defaultState);
+
+const scoreLeft = document.getElementById('scoreLeft');
+const scoreRight = document.getElementById('scoreRight');
+const setLeft = document.getElementById('setLeft');
+const setRight = document.getElementById('setRight');
+const leftSide = document.getElementById('leftSide');
+const rightSide = document.getElementById('rightSide');
+const zoneLeft = document.getElementById('zoneLeft');
+const zoneRight = document.getElementById('zoneRight');
+const controls = document.getElementById('controls');
+const setGroupLeft = document.getElementById('setGroupLeft');
+const setGroupRight = document.getElementById('setGroupRight');
+
+let uiActive = false;
+let timer;
+
+/* STORAGE */
+function save(){
+  localStorage.setItem('scoreboard', JSON.stringify(state));
+}
+
+/* RENDER */
+function render(){
+  scoreLeft.textContent = state.left.score;
+  scoreRight.textContent = state.right.score;
+  setLeft.textContent = state.left.sets;
+  setRight.textContent = state.right.sets;
+
+  leftSide.className = `side ${state.left.color}`;
+  rightSide.className = `side ${state.right.color}`;
+  scoreLeft.className = `score ${state.left.color}`;
+  scoreRight.className = `score ${state.right.color}`;
+
+  document.body.className = state.theme === 'light' ? 'light' : '';
+  document.getElementById('themeColor').content =
+    state.theme === 'light' ? '#f8fafc' : '#020617';
+}
+
+/* SCORE */
+function addScore(side){
+  if(!uiActive) return;
+  state[side].score++;
+  save(); render();
+}
+
+function subScore(side){
+  if(!uiActive) return;
+  if(state[side].score > 0) state[side].score--;
+  save(); render();
+}
+
+/* SET */
+function changeSet(side, delta){
+  state[side].sets = Math.max(0, state[side].sets + delta);
+  save(); render();
+}
+
+/* CONTROLS */
+function confirmNewGame(){
+  if(confirm('Iniciar novo jogo? (placar será zerado)')){
+    state.left.score = 0;
+    state.right.score = 0;
+    save(); render();
+  }
+}
+
+function confirmReset(){
+  if(confirm('Resetar tudo? (placar e sets)')){
+    state = structuredClone(defaultState);
+    save(); render();
+  }
+}
+
+function swapSides(){
+  [state.left, state.right] = [state.right, state.left];
+  save(); render();
+}
+
+function toggleTheme(){
+  state.theme = state.theme === 'dark' ? 'light' : 'dark';
+  save(); render();
+}
+
+/* UI VISIBILITY */
+function showUI(){
+  if(!uiActive){
+    uiActive = true;
+    zoneLeft.classList.add('active');
+    zoneRight.classList.add('active');
+    controls.classList.add('active');
+    setGroupLeft.classList.add('active');
+    setGroupRight.classList.add('active');
+  }
+
+  clearTimeout(timer);
+  timer = setTimeout(hideUI, 5000);
+}
+
+function hideUI(){
+  uiActive = false;
+  zoneLeft.classList.remove('active');
+  zoneRight.classList.remove('active');
+  controls.classList.remove('active');
+  setGroupLeft.classList.remove('active');
+  setGroupRight.classList.remove('active');
+}
+
+document.getElementById('main').addEventListener('click', showUI);
+document.getElementById('main').addEventListener('touchstart', showUI);
+
+render();
+</script>
+
+<script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
+
+</body>
+</html>
