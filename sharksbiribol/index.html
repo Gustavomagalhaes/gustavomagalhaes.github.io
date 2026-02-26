@@ -2,13 +2,19 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Scoreboard</title>
 
 <meta name="theme-color" id="themeColor" content="#020617">
 <link rel="manifest" href="manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Scoreboard">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="icon-192.png">
 
 <style>
+html{height:100%;}
 :root{
   --bg:#020617;
   --text:#ffffff;
@@ -38,6 +44,8 @@ body{
   background:var(--bg);
   color:var(--text);
   height:100vh;
+  min-height:100%;
+  padding:0;
   overflow:hidden;
 }
 
