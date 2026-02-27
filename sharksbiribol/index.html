@@ -3,15 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Sharks Biribol 🦈 🏐</title>
+<title>Sharks Biribol Score</title>
 
 <meta name="theme-color" id="themeColor" content="#020617">
 <link rel="manifest" href="manifest.json">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Scoreboard">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="apple-touch-icon" href="icon-192.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
 <style>
 html{height:100%;}
@@ -64,6 +61,7 @@ body{
   z-index:10;
   pointer-events:none;
 }
+
 .logo img{
   width:clamp(120px,18vw,360px);
   max-height:18vw;
@@ -76,7 +74,7 @@ body{
   justify-content:center;
   align-items:center;
   gap:1vh;
-  height: 40px;
+  height:40px;
 }
 
 .set-value{
@@ -87,18 +85,19 @@ body{
 }
 
 .set-group button{
-  width:40px;
-  height:40px;
-  border-radius:8px;
+  width:42px;
+  height:42px;
+  border-radius:10px;
   border:none;
   background:var(--panel);
   color:var(--text);
-  font-size:1.5rem;
   display:none;
+  align-items:center;
+  justify-content:center;
 }
 
 .set-group.active button{
-  display:inline-block;
+  display:flex;
 }
 
 /* MAIN */
@@ -133,14 +132,15 @@ body{
 /* SCORE BUTTONS */
 .score-btn{
   position:absolute;
-  width:70px;
-  height:70px;
-  font-size:2rem;
+  width:75px;
+  height:75px;
   border:none;
-  border-radius:16px;
+  border-radius:18px;
   background:var(--panel);
   color:var(--text);
   display:none;
+  align-items:center;
+  justify-content:center;
   z-index:20;
 }
 
@@ -161,19 +161,31 @@ body{
   left:50%;
   transform:translateX(-50%);
   display:none;
-  gap:3vh;
+  gap:2vh;
   z-index:10;
 }
 
 .controls.active{ display:flex; }
 
 .controls button{
-  font-size:1rem;
-  padding:1vh 2vh;
-  background:var(--panel);
+  width:48px;
+  height:48px;
+  border-radius:12px;
   border:none;
-  border-radius:8px;
+  background:var(--panel);
   color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* MATERIAL ICON */
+.material-symbols-outlined{
+  font-size:38px;
+}
+
+.material-symbols-outlined.bigger{ 
+  font-size:52px;
 }
 </style>
 </head>
@@ -182,9 +194,13 @@ body{
 
 <div class="top">
   <div class="set-group" id="setGroupLeft">
-    <button onclick="changeSet('left', -1)">−</button>
+    <button onclick="changeSet('left', -1)">
+      <span class="material-symbols-outlined">remove</span>
+    </button>
     <div class="set-value" id="setLeft">0</div>
-    <button onclick="changeSet('left', 1)">+</button>
+    <button onclick="changeSet('left', 1)">
+      <span class="material-symbols-outlined">add</span>
+    </button>
   </div>
 
   <div class="logo">
@@ -192,9 +208,13 @@ body{
   </div>
 
   <div class="set-group" id="setGroupRight">
-    <button onclick="changeSet('right', -1)">−</button>
+    <button onclick="changeSet('right', -1)">
+      <span class="material-symbols-outlined">remove</span>
+    </button>
     <div class="set-value" id="setRight">0</div>
-    <button onclick="changeSet('right', 1)">+</button>
+    <button onclick="changeSet('right', 1)">
+      <span class="material-symbols-outlined">add</span>
+    </button>
   </div>
 </div>
 
@@ -203,24 +223,45 @@ body{
   <div class="side blue" id="leftSide">
     <div class="score blue" id="scoreLeft">0</div>
 
-    <button class="score-btn top-left" onclick="addScore('left')">+</button>
-    <button class="score-btn bottom-left" onclick="subScore('left')">−</button>
+    <button class="score-btn top-left" onclick="addScore('left')">
+      <span class="material-symbols-outlined bigger">add_2</span>
+    </button>
+
+    <button class="score-btn bottom-left" onclick="subScore('left')">
+      <span class="material-symbols-outlined bigger">remove</span>
+    </button>
   </div>
 
   <div class="side red" id="rightSide">
     <div class="score red" id="scoreRight">0</div>
 
-    <button class="score-btn top-right" onclick="addScore('right')">+</button>
-    <button class="score-btn bottom-right" onclick="subScore('right')">−</button>
+    <button class="score-btn top-right" onclick="addScore('right')">
+      <span class="material-symbols-outlined bigger">add_2</span>
+    </button>
+
+    <button class="score-btn bottom-right" onclick="subScore('right')">
+      <span class="material-symbols-outlined bigger">remove</span>
+    </button>
   </div>
 
 </div>
 
 <div class="controls" id="controls">
-  <button onclick="confirmNewGame()">Novo Jogo</button>
-  <button onclick="confirmReset()">Reset</button>
-  <button onclick="swapSides()">Inverter</button>
-  <button onclick="toggleTheme()">Mudar Tema</button>
+  <button onclick="confirmReset()">
+    <span class="material-symbols-outlined">power_settings_new</span>
+  </button>
+  
+  <button onclick="confirmNewGame()">
+    <span class="material-symbols-outlined">sports_handball</span>
+  </button>
+
+  <button onclick="swapSides()">
+    <span class="material-symbols-outlined">swap_horiz</span>
+  </button>
+
+  <button onclick="toggleTheme()">
+    <span class="material-symbols-outlined">dark_mode</span>
+  </button>
 </div>
 
 <script>
@@ -246,12 +287,10 @@ const scoreButtons = document.querySelectorAll('.score-btn');
 let uiActive = false;
 let timer;
 
-/* STORAGE */
 function save(){
   localStorage.setItem('scoreboard', JSON.stringify(state));
 }
 
-/* RENDER */
 function render(){
   scoreLeft.textContent = state.left.score;
   scoreRight.textContent = state.right.score;
@@ -268,7 +307,6 @@ function render(){
     state.theme === 'light' ? '#f8fafc' : '#020617';
 }
 
-/* SCORE */
 function addScore(side){
   if(!uiActive) return;
   state[side].score++;
@@ -281,15 +319,13 @@ function subScore(side){
   save(); render();
 }
 
-/* SET */
 function changeSet(side, delta){
   state[side].sets = Math.max(0, state[side].sets + delta);
   save(); render();
 }
 
-/* CONTROLS */
 function confirmNewGame(){
-  if(confirm('Iniciar novo jogo? (placar será zerado)')){
+  if(confirm('Iniciar novo jogo?')){
     state.left.score = 0;
     state.right.score = 0;
     save(); render();
@@ -297,7 +333,7 @@ function confirmNewGame(){
 }
 
 function confirmReset(){
-  if(confirm('Resetar? (placar e sets)')){
+  if(confirm('Resetar placar e sets?')){
     state = structuredClone(defaultState);
     save(); render();
   }
@@ -313,14 +349,13 @@ function toggleTheme(){
   save(); render();
 }
 
-/* UI VISIBILITY */
 function showUI(){
   if(!uiActive){
     uiActive = true;
     controls.classList.add('active');
     setGroupLeft.classList.add('active');
     setGroupRight.classList.add('active');
-    scoreButtons.forEach(btn => btn.style.display = 'block');
+    scoreButtons.forEach(btn => btn.style.display = 'flex');
   }
 
   clearTimeout(timer);
@@ -339,12 +374,6 @@ document.getElementById('main').addEventListener('click', showUI);
 document.getElementById('main').addEventListener('touchstart', showUI);
 
 render();
-</script>
-
-<script>
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('sw.js');
-}
 </script>
 
 </body>
